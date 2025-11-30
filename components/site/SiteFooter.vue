@@ -26,7 +26,6 @@
   </div>
 
   <NuxtLink
-    v-if="isPrivacyPolicy"
     to="/privacy"
     class="privacy-policy-link"
     aria-label="プライバシーポリシー"
@@ -37,7 +36,6 @@
 
 <script setup lang="ts">
 type Props = {
-  isPrivacyPolicy?: boolean;
   isContact?: boolean;
 };
 
