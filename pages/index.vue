@@ -29,8 +29,6 @@ import Catchphrase from "@/components/top/Catchphrase.vue";
 
 usePageTitle();
 
-definePageMeta({ layout: "top" });
-
 // TODO: 要件固まったら差し替える
 const infoItems = [
   {

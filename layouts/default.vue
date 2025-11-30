@@ -5,5 +5,5 @@
     <slot />
   </main>
 
-  <SiteFooter :is-contact="true" />
+  <SiteFooter is-contact />
 </template>
