@@ -4,43 +4,36 @@
     <div class="information-list-description">お知らせ・最新情報</div>
 
     <div class="information-list-wrap">
-      <div
-        class="information-list-card"
-        v-for="(item, idx) in infoItems"
-        :key="idx"
-      >
-        <div class="information-list-image-area">
-          <img :src="item.img" :alt="item.alt" class="information-list-image" />
-        </div>
+      <Line class="information-list-line" />
 
-        <div class="information-list-body">
-          <div class="information-list-meta">
-            <span class="information-list-date">{{ item.date }}</span>
-            <span class="information-list-tag">{{ item.tag }}</span>
+      <template v-for="item in infoItems" :key="item.id">
+        <RouterLink
+          :to="`/information/${item.id}`"
+          class="information-list-row"
+        >
+          <div class="information-list-left">
+            <div class="information-list-date">{{ item.date }}</div>
+            <div class="information-list-tag">{{ item.tag }}</div>
+            <div class="information-list-headline">{{ item.title }}</div>
           </div>
-
-          <div class="information-list-headline">{{ item.title }}</div>
-          <p class="information-list-text">{{ item.text }}</p>
-
-          <div
-            class="information-list-more"
-            @click="toInformationDetail(item.id)"
-          >
-            <span class="information-list-more-text">VIEW MORE</span>
+          <div class="information-list-cta">
+            <div class="information-list-cta-label">VIEW MORE</div>
             <img
               src="/images/common/arrow-right-black.svg"
-              alt="View More"
-              class="information-list-more-icon"
+              alt=""
+              aria-hidden="true"
+              class="information-list-cta-icon"
             />
           </div>
-        </div>
-      </div>
+        </RouterLink>
+        <Line class="information-list-line" />
+      </template>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useRouter } from "vue-router";
+import Line from "@/components/common/Line.vue";
 
 type InfoItem = {
   id: number;
@@ -49,15 +42,9 @@ type InfoItem = {
   date: string;
   tag: string;
   title: string;
-  text: string;
 };
 type Props = { infoItems: InfoItem[] };
 defineProps<Props>();
-
-const router = useRouter();
-const toInformationDetail = (id: number) => {
-  router.push("/information/" + id);
-};
 </script>
 
 <style scoped lang="scss">
@@ -80,103 +67,87 @@ const toInformationDetail = (id: number) => {
 }
 
 .information-list-wrap {
-  width: min(1200px, 92%);
-  margin: 48px auto 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px 40px;
+  width: 70%;
+  margin: 72px auto 0 auto;
 }
 
-.information-list-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.information-list-image-area {
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-}
-
-.information-list-image {
+.information-list-line {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  margin: 0 auto;
 }
 
-.information-list-body {
-  --text-area-h: 220px;
+.information-list-row {
+  padding: 30px 16px;
   display: flex;
-  flex-direction: column;
-  min-height: var(--text-area-h);
-  overflow: hidden;
-  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 160ms ease, transform 160ms ease;
+  gap: 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: pointer;
 }
-
-.information-list-meta {
+.information-list-row:focus-visible {
+  outline: 2px solid #3a83c7;
+  outline-offset: 2px;
+}
+.information-list-left {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin: 24px 0 16px;
+  gap: 20px;
+  flex: 1 1 auto;
+  min-width: 0;
 }
-
 .information-list-date {
   font-family: "Oswald", sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
-
 .information-list-tag {
-  font-size: 10px;
+  font-size: 14px;
+  background-color: #023482;
+  width: 80px;
   color: #fff;
-  background: #023482;
-  padding: 4px 10px;
+  font-weight: 600;
   text-align: center;
-  line-height: 1;
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
-
 .information-list-headline {
   font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 12px;
-  text-align: left;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  font-weight: 500;
+  flex: 1 1 auto;
+  min-width: 0;
   overflow: hidden;
-  line-clamp: 2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+.information-list-row:hover .information-list-headline {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
 }
 
-.information-list-text {
-  font-size: 14px;
-  line-height: 1.7;
-  margin: 0;
-  text-align: left;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-  line-clamp: 3;
-  overflow-wrap: anywhere;
-}
-
-.information-list-more {
+.information-list-cta {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: auto;
-  cursor: pointer;
-  justify-content: flex-end;
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
-
-.information-list-more-text {
-  font-size: 16px;
+.information-list-cta-label {
   font-family: "Oswald", sans-serif;
+  font-size: 20px;
   font-weight: 600;
 }
-
-.information-list-more-icon {
-  width: 48px;
-  height: 48px;
+.information-list-cta-icon {
+  width: 40px;
+  height: 40px;
 }
 </style>
