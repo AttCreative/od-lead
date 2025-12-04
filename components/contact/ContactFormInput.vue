@@ -217,7 +217,7 @@
 import { reactive, computed } from "vue";
 import Line from "@/components/common/Line.vue";
 import AppButton from "@/components/common/AppButton.vue";
-import { useZipcode } from "@/composables/useZipcode";
+// import { useZipcode } from "@/composables/useZipcode";
 import { useContactStore } from "@/stores/contact";
 import type { FormData, Step } from "@/types/contact";
 
