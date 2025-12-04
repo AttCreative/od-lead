@@ -2,12 +2,7 @@
   <div class="information-detail">
     <PageHeader title="INFORMATION" subtitle="お知らせ・最新情報" />
 
-    <Breadcrumbs
-      :items="[
-        { label: 'お知らせ・最新情報', to: '/information' },
-        { label: currentItem?.title || '' },
-      ]"
-    />
+    <Breadcrumbs :items="[{ label: currentItem?.title || '' }]" />
 
     <div class="information-detail-meta">
       <div class="information-detail-date">{{ currentItem?.date }}</div>
@@ -42,33 +37,17 @@ usePageTitle("INFORMATION");
 const infoItems = [
   {
     id: 1,
-    img: "/images/top/catchphrase.svg",
+    img: "/images/information/renewal.svg",
     alt: "情報画像1",
     date: "2025.01.01",
     tag: "お知らせ",
     title: "ホームページリニューアルのお知らせ",
-    text: `平素より格別のご愛顧を賜り、誠にありがとうございます。
-この度、皆さまにより便利にご利用いただくため、ホームページを全面リニューアルいたしました。
-今後もより良いサービスの提供を目指してまいりますので、引き続きご愛顧賜りますようお願い申し上げます。`,
-  },
-  {
-    id: 2,
-    img: "/images/top/catchphrase.svg",
-    alt: "情報画像2",
-    date: "2025.02.01",
-    tag: "ニュース",
-    title: "新サービス開始のお知らせ",
-    text: `新サービス「EPGクラウド」をリリースしました。
-これにより、さらに効率的な業務運用が可能になります。`,
-  },
-  {
-    id: 3,
-    img: "/images/top/catchphrase.svg",
-    alt: "情報画像3",
-    date: "2025.03.01",
-    tag: "お知らせ",
-    title: "システムメンテナンスのお知らせ",
-    text: `システムメンテナンスのお知らせ`,
+    text: `平素よりリード株式会社のホームページをご覧いただき、誠にありがとうございます。
+このたび、当社ではホームページを全面リニューアルいたしました。
+不動産買取（区分マンション・中古戸建・土地）を中心に、仲介事業やリフォーム事業など、より幅広いニーズにお応えできる体制を整えております。
+今回のリニューアルでは、お客様にとってより見やすく、わかりやすく、情報を探しやすい構成を目指し、デザインや内容を一新しました。
+今後は、最新の買取実績やリフォーム事例、不動産に関するお役立ち情報などを随時更新してまいります。
+引き続き、皆さまからのご支援を賜りますようお願い申し上げます。`,
   },
 ];
 
