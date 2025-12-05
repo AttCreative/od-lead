@@ -10,7 +10,6 @@ const initialState: FormData = {
   tel: "",
   topics: [],
   details: "",
-  agree: false,
 };
 
 export const useContactStore = defineStore("contact", () => {

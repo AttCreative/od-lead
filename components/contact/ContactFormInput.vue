@@ -68,7 +68,6 @@
           v-model.trim="form.zip"
           inputmode="numeric"
           pattern="[0-9]*"
-          placeholder="1234567"
           class="contact-form-input"
           :aria-invalid="!valid.zip && touched.zip"
           @blur="touched.zip = true"
@@ -115,7 +114,6 @@
           v-model.trim="form.tel"
           type="tel"
           class="contact-form-input"
-          placeholder="0312345678"
           :aria-invalid="!valid.tel && touched.tel"
           @blur="touched.tel = true"
         />
@@ -182,49 +180,28 @@
         </p>
       </div>
 
-      <Line class="contact-form-line" />
-
-      <div class="contact-form-policy">{{ privacyPoliciesText }}</div>
-
-      <div class="contact-form-after">
-        <label class="contact-form-check contact-form-agree">
-          <input
-            type="checkbox"
-            v-model="form.agree"
-            @blur="touched.agree = true"
-          />
-          個人情報保護方針に同意する
-        </label>
-        <p v-if="!valid.agree && touched.agree" class="contact-form-error">
-          送信には同意が必要です。
-        </p>
-
-        <AppButton
-          type="submit"
-          size="lg"
-          class="contact-form-confirm"
-          :disabled="!isValidAll"
-          :loading="ui.submitting"
-        >
-          入力内容を確認
-        </AppButton>
-      </div>
+      <AppButton
+        type="submit"
+        size="lg"
+        class="contact-form-confirm-btn"
+        :disabled="!isValidAll"
+        :loading="ui.submitting"
+      >
+        入力内容を確認
+      </AppButton>
     </div>
   </form>
 </template>
 
 <script setup lang="ts">
 import { reactive, computed } from "vue";
+import { useContactStore } from "@/stores/contact";
 import Line from "@/components/common/Line.vue";
 import AppButton from "@/components/common/AppButton.vue";
-// import { useZipcode } from "@/composables/useZipcode";
-import { useContactStore } from "@/stores/contact";
 import type { FormData, Step } from "@/types/contact";
 
 type Emit = (event: "step-change", step: Step) => void;
 const emit = defineEmits<Emit>();
-
-const privacyPoliciesText = await $fetch("/privacyPolicies.txt");
 
 const store = useContactStore();
 const { formState, setFormData } = store;
@@ -238,7 +215,6 @@ const form = reactive<FormData>({
   tel: formState.tel,
   topics: [...formState.topics],
   details: formState.details,
-  agree: formState.agree,
 });
 
 const touched = reactive({
@@ -248,7 +224,6 @@ const touched = reactive({
   address: false,
   tel: false,
   details: false,
-  agree: false,
 });
 
 const valid = reactive({
@@ -272,9 +247,6 @@ const valid = reactive({
   get details() {
     return form.details.trim().length > 0;
   },
-  get agree() {
-    return form.agree === true;
-  },
 });
 
 const isValidAll = computed(
@@ -284,8 +256,7 @@ const isValidAll = computed(
     valid.zip &&
     valid.address &&
     valid.tel &&
-    valid.details &&
-    valid.agree
+    valid.details
 );
 
 const ui = reactive({ zipLoading: false, submitting: false });
@@ -293,10 +264,8 @@ const ui = reactive({ zipLoading: false, submitting: false });
 const onZipSearch = async () => {
   try {
     ui.zipLoading = true;
-    // TODO: 郵便番号検索APIに置き換える
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    const result = "東京都千代田区丸の内１丁目";
-    form.address = result;
+    const response = await $fetch<string>(`/api/zipcode/${form.zip}`);
+    form.address = response || "";
   } finally {
     ui.zipLoading = false;
   }
@@ -422,10 +391,10 @@ const onSubmit = async () => {
   font-size: 16px;
   padding: 6px 14px;
 }
-.contact-form-confirm {
+.contact-form-confirm-btn {
   width: 50%;
   font-size: 30px;
   padding: 12px 20px;
-  margin: 16px 0;
+  margin: 64px 0 16px 0;
 }
 </style>

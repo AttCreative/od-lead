@@ -36,6 +36,16 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ['~/assets/reset.css'],
+  css: ["~/assets/reset.css"],
   modules: ["@pinia/nuxt"],
+
+  runtimeConfig: {
+    public: {
+      zipCodeTokenUrl: process.env.ZIPCODE_TOKEN_URL || "",
+      zipCodeSearchUrl: process.env.ZIPCODE_SEARCH_URL || "",
+      zipCodeClientId: process.env.ZIPCODE_CLIENT_ID || "",
+      zipCodeSecretKey: process.env.ZIPCODE_SECRET_KEY || "",
+      zipCodeXForwardedFor: process.env.ZIPCODE_X_FORWARDED_FOR || "",
+    },
+  },
 });

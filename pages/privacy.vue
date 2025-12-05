@@ -31,12 +31,16 @@ const html = md.render(privacyMd);
   font-size: 24px;
 }
 
-.privacy-policy-main-text :deep(h3 + p) {
+.privacy-policy-main-text :deep(p) {
   margin: 0;
 }
 
 .privacy-policy-main-text :deep(.privacy-policy-description) {
   text-align: center;
   margin-bottom: 80px;
+}
+
+.privacy-policy-main-text :deep(h3:last-of-type + p) {
+  margin-bottom: 96px;
 }
 </style>
