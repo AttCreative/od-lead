@@ -143,6 +143,10 @@ import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import PageHeader from "@/components/common/PageHeader.vue";
 
 usePageTitle("RENOVATION & DESIGN");
+
+definePageMeta({
+  middleware: ["ua-device-redirect"],
+});
 </script>
 
 <style scoped lang="scss">

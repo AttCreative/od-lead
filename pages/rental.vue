@@ -69,6 +69,10 @@ import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import PageHeader from "@/components/common/PageHeader.vue";
 
 usePageTitle("RENTAL & MANAGEMENT");
+
+definePageMeta({
+  middleware: ["ua-device-redirect"],
+});
 </script>
 
 <style scoped lang="scss">
