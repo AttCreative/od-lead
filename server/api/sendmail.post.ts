@@ -2,20 +2,25 @@ import { defineEventHandler, createError } from "h3";
 import nodemailer from "nodemailer";
 import type { SendMailRequest } from "@/types/contact";
 
-const SMTP = {
-  host: "lead888.sakura.ne.jp",
-  port: 587,
-  user: "info@lead-k.jp",
-  pass: "uhPQD2YM",
-  from: "info@lead-k.jp",
-  to: "mashino.ryota@att-br.jp",
-};
-
 export default defineEventHandler(async (event) => {
   const body = await readBody<SendMailRequest>(event);
 
-  const { host, port, user, pass, from, to } = SMTP;
-  if (!host || !user || !pass || !from || !to) {
+  const runtimeConfig = useRuntimeConfig();
+
+  const SMTP_HOST = runtimeConfig.smtpHost as string;
+  const SMTP_PORT = Number(runtimeConfig.smtpPort);
+  const SMTP_USER = runtimeConfig.smtpUser as string;
+  const SMTP_PASS = runtimeConfig.smtpPass as string;
+  const SMTP_FROM = runtimeConfig.smtpFrom as string;
+
+  if (
+    !SMTP_HOST ||
+    !SMTP_PORT ||
+    !SMTP_USER ||
+    !SMTP_PASS ||
+    !SMTP_FROM ||
+    !body.email
+  ) {
     throw createError({
       statusCode: 500,
       statusMessage: "SMTP config is missing",
@@ -23,15 +28,17 @@ export default defineEventHandler(async (event) => {
   }
 
   const transporter = nodemailer.createTransport({
-    host,
-    port,
-    auth: { user, pass },
+    host: SMTP_HOST,
+    port: SMTP_PORT,
+    auth: { user: SMTP_USER, pass: SMTP_PASS },
     tls: {
       rejectUnauthorized: false,
     },
   });
 
   const company = body.company || "（未入力）";
+  const zip = body.zip || "（未入力）";
+  const address = body.address || "（未入力）";
   const topicsText = body.topics.length ? body.topics.join("、") : "（未選択）";
 
   const mailText = `社名：　${company}
@@ -40,9 +47,9 @@ export default defineEventHandler(async (event) => {
 
 メールアドレス：　${body.email}
 
-郵便番号：${body.zip}
+郵便番号：${zip}
 
-住所：${body.address}
+住所：${address}
 
 電話番号：${body.tel}
 
@@ -54,8 +61,8 @@ ${body.details}
 
   try {
     await transporter.sendMail({
-      from,
-      to,
+      from: SMTP_FROM as string,
+      to: body.email,
       subject: "HPからのお問い合わせです",
       text: mailText,
     });

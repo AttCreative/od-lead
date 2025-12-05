@@ -6,8 +6,8 @@ export type FormData = {
   company: string;
   name: string;
   email: string;
-  zip: string;
-  address: string;
+  zip?: string;
+  address?: string;
   tel: string;
   topics: string[];
   details: string;

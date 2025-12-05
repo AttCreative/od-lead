@@ -60,9 +60,7 @@
 
       <Line class="contact-form-line" />
 
-      <label class="contact-form-label contact-form-label--required"
-        >郵便番号</label
-      >
+      <label class="contact-form-label">郵便番号</label>
       <div class="contact-form-zip">
         <input
           v-model.trim="form.zip"
@@ -72,6 +70,7 @@
           :aria-invalid="!valid.zip && touched.zip"
           @blur="touched.zip = true"
         />
+
         <AppButton
           type="button"
           size="sm"
@@ -88,20 +87,13 @@
 
       <Line class="contact-form-line" />
 
-      <label class="contact-form-label contact-form-label--required"
-        >住所</label
-      >
+      <label class="contact-form-label">住所</label>
       <div>
         <input
           v-model.trim="form.address"
           type="text"
           class="contact-form-input"
-          :aria-invalid="!valid.address && touched.address"
-          @blur="touched.address = true"
         />
-        <p v-if="!valid.address && touched.address" class="contact-form-error">
-          必須項目です。
-        </p>
       </div>
 
       <Line class="contact-form-line" />
@@ -221,7 +213,6 @@ const touched = reactive({
   name: false,
   email: false,
   zip: false,
-  address: false,
   tel: false,
   details: false,
 });
@@ -235,10 +226,10 @@ const valid = reactive({
     return p.test(form.email.trim());
   },
   get zip() {
-    return /^\d{7}$/.test(form.zip.trim());
-  },
-  get address() {
-    return form.address.trim().length > 0;
+    const v = form.zip?.trim();
+    if (!v) return true;
+    const digits = v.replace(/\D/g, "");
+    return digits.length === 7;
   },
   get tel() {
     const d = form.tel.replace(/\D/g, "");
@@ -250,13 +241,7 @@ const valid = reactive({
 });
 
 const isValidAll = computed(
-  () =>
-    valid.name &&
-    valid.email &&
-    valid.zip &&
-    valid.address &&
-    valid.tel &&
-    valid.details
+  () => valid.name && valid.email && valid.tel && valid.details
 );
 
 const ui = reactive({ zipLoading: false, submitting: false });

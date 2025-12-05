@@ -2,13 +2,11 @@ import type { JapanPostZipcodeResponse } from "@/types/contact";
 
 export default defineEventHandler(async (event) => {
   const {
-    public: {
-      zipCodeTokenUrl: TOKEN_URL,
-      zipCodeSearchUrl: SEARCH_URL,
-      zipCodeClientId: CLIENT_ID,
-      zipCodeSecretKey: SECRET_KEY,
-      zipCodeXForwardedFor: X_FORWARDED_FOR,
-    },
+    zipCodeTokenUrl: TOKEN_URL,
+    zipCodeSearchUrl: SEARCH_URL,
+    zipCodeClientId: CLIENT_ID,
+    zipCodeSecretKey: SECRET_KEY,
+    zipCodeXForwardedFor: X_FORWARDED_FOR,
   } = useRuntimeConfig();
 
   const code = getRouterParam(event, "code") || "";
@@ -20,11 +18,11 @@ export default defineEventHandler(async (event) => {
   }
 
   // アクセストークン取得
-  const tokenResponse = await $fetch<{ token?: string }>(TOKEN_URL, {
+  const tokenResponse = await $fetch<{ token?: string }>(TOKEN_URL as string, {
     method: "POST",
     headers: {
       "content-type": "application/json",
-      "x-forwarded-for": X_FORWARDED_FOR,
+      "x-forwarded-for": X_FORWARDED_FOR as string,
     },
     body: {
       grant_type: "client_credentials",

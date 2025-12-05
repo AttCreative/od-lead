@@ -40,12 +40,15 @@ export default defineNuxtConfig({
   modules: ["@pinia/nuxt"],
 
   runtimeConfig: {
-    public: {
-      zipCodeTokenUrl: process.env.ZIPCODE_TOKEN_URL || "",
-      zipCodeSearchUrl: process.env.ZIPCODE_SEARCH_URL || "",
-      zipCodeClientId: process.env.ZIPCODE_CLIENT_ID || "",
-      zipCodeSecretKey: process.env.ZIPCODE_SECRET_KEY || "",
-      zipCodeXForwardedFor: process.env.ZIPCODE_X_FORWARDED_FOR || "",
-    },
+    zipCodeTokenUrl: process.env.ZIPCODE_TOKEN_URL || "",
+    zipCodeSearchUrl: process.env.ZIPCODE_SEARCH_URL || "",
+    zipCodeClientId: process.env.ZIPCODE_CLIENT_ID || "",
+    zipCodeSecretKey: process.env.ZIPCODE_SECRET_KEY || "",
+    zipCodeXForwardedFor: process.env.ZIPCODE_X_FORWARDED_FOR || "",
+    smtpHost: process.env.SMTP_HOST || "",
+    smtpPort: process.env.SMTP_PORT || "",
+    smtpUser: process.env.SMTP_USER || "",
+    smtpPass: process.env.SMTP_PASS || "",
+    smtpFrom: process.env.SMTP_FROM || "",
   },
 });

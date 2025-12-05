@@ -31,14 +31,14 @@
 
       <label class="contact-confirm-label">郵便番号</label>
       <div class="contact-confirm-value">
-        {{ form.zip }}
+        {{ form.zip || "（未入力）" }}
       </div>
 
       <Line class="contact-confirm-line" />
 
       <label class="contact-confirm-label">住所</label>
       <div class="contact-confirm-value">
-        {{ form.address }}
+        {{ form.address || "（未入力）" }}
       </div>
 
       <Line class="contact-confirm-line" />
