@@ -28,9 +28,9 @@
   <NuxtLink
     to="/privacy"
     class="privacy-policy-link"
-    aria-label="プライバシーポリシー"
+    aria-label="個人情報保護方針"
   >
-    プライバシーポリシー
+    個人情報保護方針
   </NuxtLink>
 </template>
 
