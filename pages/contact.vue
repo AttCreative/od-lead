@@ -29,6 +29,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { useContactStore } from "@/stores/contact";
 import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import PageHeader from "@/components/common/PageHeader.vue";
 import StepIndicator from "@/components/contact/StepIndicator.vue";
@@ -41,11 +42,22 @@ usePageTitle("CONTACT US");
 
 definePageMeta({ layout: "contact" });
 
+const store = useContactStore();
+
 const step = ref<Step>("01");
 
 const handleStepChange = (newStep: Step) => {
   step.value = newStep;
+
+  nextTick(() => {
+    window.scrollTo({ top: 0 });
+  });
 };
+
+onUnmounted(() => {
+  step.value = "01";
+  store.reset();
+});
 </script>
 
 <style scoped>
