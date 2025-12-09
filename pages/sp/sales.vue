@@ -119,7 +119,6 @@ usePageTitle("SALES & RESALE");
 
 definePageMeta({
   middleware: ["ua-device-redirect"],
-  layout: "mobile",
 });
 
 const isSupportProcessOpen = ref<boolean>(false);

@@ -96,7 +96,6 @@ usePageTitle("RENTAL & MANAGEMENT");
 
 definePageMeta({
   middleware: ["ua-device-redirect"],
-  layout: "mobile",
 });
 
 const isBrokerageServiceOpen = ref<boolean>(false);

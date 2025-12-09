@@ -142,7 +142,6 @@ usePageTitle("RENOVATION & DESIGN");
 
 definePageMeta({
   middleware: ["ua-device-redirect"],
-  layout: "mobile",
 });
 
 const isBrokerageServiceOpen = ref(false);
