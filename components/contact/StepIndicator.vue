@@ -112,4 +112,50 @@ const currentIndex = computed(() => {
   font-size: 24px;
   font-weight: 600;
 }
+
+@media (max-width: 1024px) {
+  .contact-step-indicator {
+    width: 90%;
+    margin: 60px auto 0;
+  }
+
+  .contact-step-indicator-steps {
+    min-height: 68px;
+  }
+
+  .contact-step-indicator-step-inner {
+    gap: 6px;
+  }
+
+  .contact-step-indicator-step-num {
+    font-size: 20px;
+  }
+
+  .contact-step-indicator-step-label {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-step-indicator {
+    width: 100%;
+    margin: 40px auto 0;
+  }
+
+  .contact-step-indicator-steps {
+    min-height: 56px;
+  }
+
+  .contact-step-indicator-step-inner {
+    gap: 4px;
+  }
+
+  .contact-step-indicator-step-num {
+    font-size: 12px;
+  }
+
+  .contact-step-indicator-step-label {
+    font-size: 8px;
+  }
+}
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div class="company-page">
     <Breadcrumbs
+      v-if="!isMobile"
       :items="[{ label: '会社概要' }]"
       class="company-page-breadcrumb"
     />
@@ -135,6 +136,8 @@ import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import Line from "@/components/common/Line.vue";
 
 usePageTitle("COMPANY");
+
+const isMobile = useIsMobile();
 </script>
 
 <style scoped lang="scss">
@@ -235,5 +238,80 @@ usePageTitle("COMPANY");
 .company-page-arrow-icon {
   width: 32px;
   height: 32px;
+}
+
+@media (max-width: 768px) {
+  .company-page-header {
+    margin: 48px auto 32px;
+    row-gap: 2px;
+  }
+
+  .company-page-title {
+    font-size: 16px;
+  }
+
+  .company-page-subtitle {
+    font-size: 24px;
+  }
+
+  .company-page-image {
+    width: 100%;
+  }
+
+  .company-page-details {
+    width: 90%;
+    margin: 0 auto 48px;
+  }
+
+  .company-page-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+    row-gap: 4px;
+  }
+
+  .company-page-label {
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .company-page-value {
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .company-page-map {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .company-page-map iframe {
+    width: 100%;
+    height: 220px;
+  }
+
+  .company-page-address-bar {
+    max-width: 100%;
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .company-page-address {
+    font-size: 14px;
+  }
+
+  .company-page-map-link a {
+    font-size: 14px;
+  }
+
+  .company-page-arrow-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 </style>

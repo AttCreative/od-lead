@@ -382,4 +382,101 @@ const onSubmit = async () => {
   padding: 12px 20px;
   margin: 64px 0 16px 0;
 }
+
+@media (max-width: 1024px) {
+  .contact-form {
+    width: 85%;
+    padding: 20px 0 36px;
+  }
+
+  .contact-form-note {
+    margin: 40px 0 40px;
+    font-size: 15px;
+  }
+
+  .contact-form-label {
+    font-size: 15px;
+  }
+
+  .contact-form-input,
+  .contact-form-textarea {
+    font-size: 15px;
+    padding: 9px 11px;
+  }
+
+  .contact-form-zip {
+    grid-template-columns: 25% auto;
+  }
+
+  .contact-form-zip-btn {
+    width: 20%;
+    font-size: 15px;
+    padding: 6px 12px;
+  }
+
+  .contact-form-topics-row {
+    column-gap: 16px;
+  }
+
+  .contact-form-policy {
+    width: 80%;
+    height: 280px;
+    font-size: 13px;
+  }
+
+  .contact-form-confirm-btn {
+    width: 70%;
+    font-size: 20px;
+    margin: 48px 0 16px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%;
+    padding: 16px 0 32px;
+  }
+
+  .contact-form-note {
+    margin: 32px 0 32px;
+    font-size: 14px;
+  }
+
+  .contact-form-label {
+    font-size: 14px;
+  }
+
+  .contact-form-input,
+  .contact-form-textarea {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .contact-form-zip {
+    grid-template-columns: 1fr auto;
+  }
+
+  .contact-form-zip-btn {
+    width: auto;
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .contact-form-topics-row {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+
+  .contact-form-policy {
+    width: 100%;
+    height: 240px;
+    font-size: 12px;
+  }
+
+  .contact-form-confirm-btn {
+    width: 100%;
+    font-size: 20px;
+    margin: 32px 0 16px 0;
+  }
+}
 </style>

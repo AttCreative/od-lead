@@ -1,8 +1,12 @@
 <template>
   <div class="recruit-page">
-    <PageHeader title="RECRUIT" subtitle="採用情報" />
+    <component
+      :is="isMobile ? PageSpHeader : PageHeader"
+      title="RECRUIT"
+      subtitle="採用情報"
+    />
 
-    <Breadcrumbs :items="[{ label: '採用情報' }]" />
+    <Breadcrumbs v-if="!isMobile" :items="[{ label: '採用情報' }]" />
 
     <div class="recruit-page-hero">
       <img
@@ -146,8 +150,11 @@
 import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import Line from "@/components/common/Line.vue";
 import PageHeader from "@/components/common/PageHeader.vue";
+import PageSpHeader from "@/components/common/PageSpHeader.vue";
 
 usePageTitle("RECRUIT");
+
+const isMobile = useIsMobile();
 </script>
 
 <style scoped lang="scss">
@@ -215,5 +222,55 @@ usePageTitle("RECRUIT");
 .recruit-area-center {
   text-align: center;
   margin-top: 36px;
+}
+
+@media (max-width: 768px) {
+  .recruit-page-hero {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .recruit-page-hero-img {
+    width: 100%;
+  }
+
+  .recruit-page-intro-strong {
+    width: 90%;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  .recruit-info-area {
+    width: 90%;
+  }
+
+  .recruit-type {
+    font-size: 20px;
+    padding-left: 0;
+    margin-bottom: 12px;
+  }
+
+  .recruit-area-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    row-gap: 4px;
+  }
+
+  .recruit-item {
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .recruit-answer {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .recruit-area-center {
+    margin-top: 24px;
+  }
 }
 </style>

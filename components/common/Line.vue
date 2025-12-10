@@ -11,4 +11,10 @@
   margin: 16px 0;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .line {
+    margin: 8px 0;
+  }
+}
 </style>

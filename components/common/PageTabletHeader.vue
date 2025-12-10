@@ -16,24 +16,24 @@ defineProps<Props>();
 
 <style scoped lang="scss">
 .page-header {
-  padding-left: 20px;
-  margin: 32px auto 0 auto;
+  padding-left: 48px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 1.2;
+  margin: 24px auto 0 auto;
+  align-items: baseline;
+  gap: 6px;
 }
+
 .page-title {
   font-family: "Oswald", sans-serif;
   color: #023482;
-  font-size: 32px;
+  font-size: 60px;
   font-weight: 600;
 }
 
 .page-subtitle {
   font-family: "Oswald", sans-serif;
   color: #023482;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
 }
 </style>

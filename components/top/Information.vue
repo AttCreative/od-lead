@@ -150,4 +150,90 @@ defineProps<Props>();
   width: 40px;
   height: 40px;
 }
+
+@media (max-width: 1024px) {
+  .information-section {
+    margin-top: 72px;
+  }
+  .information-list-title {
+    font-size: 48px;
+  }
+
+  .information-list-description {
+    font-size: 20px;
+  }
+
+  .information-list-wrap {
+    width: 80%;
+    margin-top: 60px;
+  }
+
+  .information-list-row {
+    padding: 24px 12px;
+    gap: 12px;
+  }
+
+  .information-list-left {
+    gap: 12px;
+  }
+
+  .information-list-date,
+  .information-list-headline,
+  .information-list-cta-label {
+    font-size: 16px;
+  }
+
+  .information-list-tag {
+    width: 60px;
+    font-size: 10px;
+  }
+
+  .information-list-cta-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .information-section {
+    margin-top: 48px;
+  }
+  .information-list-title {
+    font-size: 36px;
+  }
+
+  .information-list-description {
+    font-size: 16px;
+  }
+
+  .information-list-wrap {
+    width: 90%;
+    margin-top: 40px;
+  }
+
+  .information-list-row {
+    padding: 20px 8px;
+    gap: 8px;
+  }
+
+  .information-list-left {
+    gap: 8px;
+  }
+
+  .information-list-date,
+  .information-list-headline,
+  .information-list-cta-label {
+    font-size: 12px;
+  }
+
+  .information-list-tag {
+    width: 40px;
+    font-size: 8px;
+  }
+
+  .information-list-cta-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
 </style>

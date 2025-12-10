@@ -95,6 +95,8 @@ const overviewItems = [
   gap: 24px;
   justify-content: center;
   margin-top: 32px;
+  padding: 0 5%;
+  box-sizing: border-box;
 }
 
 .overview-list-link {
@@ -175,5 +177,51 @@ const overviewItems = [
 .overview-list-more-icon {
   width: 48px;
   height: 48px;
+}
+
+@media (max-width: 1024px) {
+  .overview-list-row {
+    margin-top: 80px;
+  }
+
+  .overview-list-title {
+    font-size: 48px;
+  }
+  .overview-list-description {
+    font-size: 18px;
+  }
+  .overview-list-headline {
+    font-size: 14px;
+  }
+  .overview-list-text {
+    font-size: 18px;
+  }
+  .overview-list-more-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-list-row {
+    margin-top: 60px;
+  }
+
+  .overview-list-title {
+    font-size: 36px;
+  }
+  .overview-list-description {
+    font-size: 16px;
+  }
+  .overview-list-headline {
+    font-size: 8px;
+  }
+  .overview-list-text {
+    font-size: 8px;
+  }
+  .overview-list-more-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 </style>
