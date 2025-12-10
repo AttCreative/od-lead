@@ -23,7 +23,6 @@
         <figure class="about-section-figure">
           <img
             src="/images/top/about-us-message.svg"
-            alt="メッセージのイメージ"
             class="about-section-img"
           />
           <figcaption class="about-section-caption">
@@ -33,7 +32,6 @@
             </span>
             <img
               src="/images/common/arrow-right-white.svg"
-              alt=""
               aria-hidden="true"
               class="about-section-caption-icon"
             />
@@ -49,7 +47,6 @@
         <figure class="about-section-figure">
           <img
             src="/images/top/about-us-company.svg"
-            alt="会社概要のイメージ"
             class="about-section-img"
           />
           <figcaption class="about-section-caption">
@@ -59,7 +56,6 @@
             </span>
             <img
               src="/images/common/arrow-right-white.svg"
-              alt=""
               aria-hidden="true"
               class="about-section-caption-icon"
             />

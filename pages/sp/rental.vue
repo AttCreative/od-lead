@@ -4,7 +4,6 @@
 
     <img
       src="/public/images/rental/rental.svg"
-      alt="レンタル画像"
       class="rental-page-hero-image"
     />
 
@@ -45,7 +44,6 @@
       </div>
       <img
         src="/public/images/rental/sp/rental-brokerage-service.svg"
-        alt="レンタル画像2"
         class="rental-page-image"
       />
     </div>
@@ -69,7 +67,6 @@
     <div v-if="isTenantVoiceOpen" class="rental-page-section-content">
       <img
         src="/public/images/rental/sp/tenant-voices.svg"
-        alt="レンタル画像3"
         class="rental-page-image"
       />
     </div>
@@ -78,7 +75,6 @@
     <div class="rental-page-section-content">
       <img
         src="/public/images/rental/sp/our-strengths.svg"
-        alt="レンタル画像4"
         class="rental-page-image"
       />
       <div class="rental-page-our-strengths-text">

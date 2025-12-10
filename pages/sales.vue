@@ -14,11 +14,7 @@
     />
 
     <div class="sales-page-hero">
-      <img
-        src="/public/images/sales/sales.svg"
-        alt="セールス画像"
-        class="sales-page-hero-img"
-      />
+      <img src="/public/images/sales/sales.svg" class="sales-page-hero-img" />
     </div>
 
     <div class="sales-page-intro-strong">
@@ -71,7 +67,6 @@
       <div class="sales-page-col-img">
         <img
           src="/public/images/sales/sales-feature.svg"
-          alt="セールス画像2"
           class="sales-page-image-sm"
         />
       </div>
@@ -81,7 +76,6 @@
     <div class="sales-page-section-image">
       <img
         src="/public/images/sales/sales-support-process.svg"
-        alt="セールス画像3"
         class="sales-page-image-sm"
       />
     </div>
@@ -90,7 +84,6 @@
     <div class="sales-page-section-image">
       <img
         src="/public/images/sales/sales-transaction.svg"
-        alt="セールス画像4"
         class="sales-page-image-sm"
       />
     </div>

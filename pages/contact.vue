@@ -9,11 +9,7 @@
     <Breadcrumbs v-if="!isMobile" :items="[{ label: 'お問い合わせ' }]" />
 
     <div class="contact-page-hero">
-      <img
-        src="/images/contact/contact-us.svg"
-        alt="お問い合わせ画像"
-        class="contact-page-hero-img"
-      />
+      <img src="/images/contact/contact-us.svg" class="contact-page-hero-img" />
     </div>
 
     <div class="contact-page-wrap">

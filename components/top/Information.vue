@@ -20,7 +20,6 @@
             <div class="information-list-cta-label">VIEW MORE</div>
             <img
               src="/images/common/arrow-right-black.svg"
-              alt=""
               aria-hidden="true"
               class="information-list-cta-icon"
             />
@@ -38,7 +37,6 @@ import Line from "@/components/common/Line.vue";
 type InfoItem = {
   id: number;
   img: string;
-  alt: string;
   date: string;
   tag: string;
   title: string;

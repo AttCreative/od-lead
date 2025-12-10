@@ -15,7 +15,7 @@
       >
         <div class="overview-list-card">
           <div class="overview-list-image-area">
-            <img :src="item.img" :alt="item.alt" class="overview-list-image" />
+            <img :src="item.img" class="overview-list-image" />
             <div class="overview-list-overlay">
               <div class="overview-list-headline">{{ item.title }}</div>
               <p class="overview-list-text">{{ item.description }}</p>
@@ -23,7 +23,6 @@
             <div class="overview-list-more">
               <img
                 src="/images/common/arrow-right-white.svg"
-                alt=""
                 class="overview-list-more-icon"
                 aria-hidden="true"
               />
@@ -39,21 +38,18 @@
 const overviewItems = [
   {
     img: "/images/top/over-view-rental.svg",
-    alt: "不動産賃貸・管理事業画像",
     title: "RENTAL & MANAGEMENT",
     description: "不動産賃貸・管理事業",
     to: "/rental",
   },
   {
     img: "/images/top/over-view-sales.svg",
-    alt: "不動産売買・再販事業画像",
     title: "SALES & RESALE",
     description: "不動産売買・再販事業",
     to: "/sales",
   },
   {
     img: "/images/top/over-view-renovation.svg",
-    alt: "リフォーム事業画像",
     title: "RENOVATION & DESIGN",
     description: "リフォーム事業",
     to: "/renovation",

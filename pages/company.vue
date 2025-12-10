@@ -7,11 +7,7 @@
     />
 
     <div class="company-page-image-area">
-      <img
-        src="/images/common/company.svg"
-        alt="プロフィール画像"
-        class="company-page-image"
-      />
+      <img src="/images/common/company.svg" class="company-page-image" />
     </div>
 
     <div class="company-page-header">
@@ -122,7 +118,6 @@
           GOOGLE MAP
           <img
             src="/images/common/arrow-right-black.svg"
-            alt="右矢印"
             class="company-page-arrow-icon"
           />
         </a>

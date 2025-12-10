@@ -25,11 +25,7 @@
     </div>
 
     <div class="information-detail-image-area">
-      <img
-        :src="currentItem?.img"
-        :alt="currentItem?.alt"
-        class="information-detail-image"
-      />
+      <img :src="currentItem?.img" class="information-detail-image" />
     </div>
   </div>
 </template>
@@ -48,7 +44,6 @@ const infoItems = [
   {
     id: 1,
     img: "/images/information/renewal.svg",
-    alt: "情報画像1",
     date: "2025.12.11",
     tag: "お知らせ",
     title: "ホームページリニューアルのお知らせ",

@@ -1,11 +1,7 @@
 <template>
   <div class="catchphrase-section">
     <div class="catchphrase-section-image">
-      <img
-        src="/images/top/catchphrase.svg"
-        alt="キャッチフレーズ画像"
-        class="catchphrase-section-img"
-      />
+      <img src="/images/top/catchphrase.svg" class="catchphrase-section-img" />
     </div>
 
     <div class="catchphrase-section-text">

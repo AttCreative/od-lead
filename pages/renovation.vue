@@ -16,7 +16,6 @@
     <div class="renovation-page-hero">
       <img
         src="/public/images/renovation/renovation.svg"
-        alt="リフォーム画像"
         class="renovation-page-hero-img"
       />
     </div>
@@ -44,7 +43,6 @@
       <div class="renovation-page-col-img">
         <img
           src="/public/images/renovation/home-renovation.svg"
-          alt="リフォーム画像2"
           class="renovation-page-image-sm"
         />
       </div>
@@ -62,7 +60,6 @@
     <div class="renovation-page-section-image">
       <img
         src="/public/images/renovation/rental-brokerage-service.svg"
-        alt="リフォーム画像3"
         class="renovation-page-image-sm"
       />
     </div>
@@ -72,14 +69,12 @@
       <div class="renovation-page-col">
         <img
           src="/public/images/renovation/renovation-before-after-01.svg"
-          alt="リフォーム画像4"
           class="renovation-page-image-md"
         />
       </div>
       <div class="renovation-page-col">
         <img
           src="/public/images/renovation/renovation-before-after-02.svg"
-          alt="リフォーム画像5"
           class="renovation-page-image-md"
         />
       </div>
@@ -134,7 +129,6 @@
       <div class="renovation-page-col">
         <img
           src="/public/images/renovation/consultation-support.svg"
-          alt="リフォーム画像6"
           class="renovation-page-image-md"
         />
       </div>

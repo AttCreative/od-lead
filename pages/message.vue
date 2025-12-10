@@ -12,7 +12,6 @@
     <div class="message-page-hero">
       <img
         src="/public/images/message/message.svg"
-        alt="メッセージ画像"
         class="message-page-hero-img"
       />
     </div>

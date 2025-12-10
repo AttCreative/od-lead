@@ -11,7 +11,6 @@
     <div class="recruit-page-hero">
       <img
         src="/public/images/recruit/recruit.svg"
-        alt="リクルート画像"
         class="recruit-page-hero-img"
       />
     </div>

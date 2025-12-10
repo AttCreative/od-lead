@@ -1,11 +1,7 @@
 <template>
   <div class="home-page">
     <div class="home-page-hero">
-      <img
-        src="/images/common/company.svg"
-        alt="トップ画像"
-        class="home-page-hero-img"
-      />
+      <img src="/images/common/company.svg" class="home-page-hero-img" />
       <div class="home-page-hero-overlay">
         <div class="home-page-hero-text">
           <div>人と街を、安心でつなぐ。</div>
@@ -33,7 +29,6 @@ const infoItems = [
   {
     id: 1,
     img: "/images/top/catchphrase.svg",
-    alt: "情報画像1",
     date: "2025.12.11",
     tag: "お知らせ",
     title: "ホームページリニューアルのお知らせ",
