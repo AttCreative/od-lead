@@ -27,7 +27,7 @@ const router = useRouter();
 const toTop = () => router.push("/");
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .contact-complete {
   width: 80%;
   margin: 60px auto 100px;
@@ -48,5 +48,45 @@ const toTop = () => router.push("/");
   font-size: 30px;
   padding: 12px 20px;
   margin: 40px 0 16px 0;
+}
+
+@media (max-width: 1024px) {
+  .contact-complete {
+    width: 85%;
+    margin: 48px auto 84px;
+  }
+
+  .contact-complete-text {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+  }
+
+  .contact-complete-button {
+    width: 60%;
+    font-size: 20px;
+    padding: 10px 18px;
+    margin: 32px 0 16px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-complete {
+    width: 90%;
+    margin: 40px auto 72px;
+  }
+
+  .contact-complete-text {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .contact-complete-button {
+    width: 100%;
+    font-size: 20px;
+    margin: 24px 0 16px 0;
+    padding: 10px 16px;
+  }
 }
 </style>

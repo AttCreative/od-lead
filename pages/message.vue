@@ -1,13 +1,17 @@
 <template>
   <div class="message-page">
-    <PageHeader title="MESSAGE" subtitle="メッセージ" />
+    <!-- <PageHeader title="MESSAGE" subtitle="メッセージ" /> -->
+    <component
+      :is="isMobile ? PageSpHeader : PageHeader"
+      title="MESSAGE"
+      subtitle="メッセージ"
+    />
 
-    <Breadcrumbs :items="[{ label: 'メッセージ' }]" />
+    <Breadcrumbs v-if="!isMobile" :items="[{ label: 'メッセージ' }]" />
 
     <div class="message-page-hero">
       <img
         src="/public/images/message/message.svg"
-        alt="メッセージ画像"
         class="message-page-hero-img"
       />
     </div>
@@ -46,8 +50,11 @@
 <script setup lang="ts">
 import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import PageHeader from "@/components/common/PageHeader.vue";
+import PageSpHeader from "@/components/common/PageSpHeader.vue";
 
 usePageTitle("MESSAGE");
+
+const isMobile = useIsMobile();
 </script>
 
 <style scoped lang="scss">
@@ -97,5 +104,37 @@ usePageTitle("MESSAGE");
   margin-bottom: 50px;
   text-align: right;
   padding-right: 15%;
+}
+
+@media (max-width: 768px) {
+  .message-page-hero {
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+
+  .message-page-hero-img {
+    width: 100%;
+  }
+
+  .message-h2 {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .message-text {
+    width: 90%;
+    font-size: 12px;
+    margin-bottom: 40px;
+  }
+
+  .message-text p {
+    line-height: 1.6;
+  }
+
+  .message-by {
+    font-size: 12px;
+    margin-bottom: 32px;
+    padding-right: 5%;
+  }
 }
 </style>

@@ -1,4 +1,4 @@
-import { isMobileUserAgent } from "@/utils/isMobile";
+import { isSpUserAgent } from "@/utils/isMobile";
 
 export default defineNuxtRouteMiddleware((to) => {
   let isMobile = false;
@@ -7,13 +7,13 @@ export default defineNuxtRouteMiddleware((to) => {
   if (process.server) {
     const event = useRequestEvent();
     const ua = event?.node.req.headers["user-agent"] as string | undefined;
-    isMobile = isMobileUserAgent(ua);
+    isMobile = isSpUserAgent(ua);
   }
 
   // クライアント遷移のとき（NuxtLink でページ移動したとき）
   if (process.client) {
     if (typeof navigator !== "undefined") {
-      isMobile = isMobileUserAgent(navigator.userAgent);
+      isMobile = isSpUserAgent(navigator.userAgent);
     }
   }
 

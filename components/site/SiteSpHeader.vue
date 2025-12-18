@@ -2,7 +2,7 @@
   <header class="sp-header">
     <div class="sp-header-left">
       <NuxtLink to="/" class="logo-link" aria-label="トップへ">
-        <img src="/images/common/company-logo.svg" alt="会社ロゴ画像" />
+        <img src="/images/common/company-logo.svg" />
       </NuxtLink>
     </div>
 

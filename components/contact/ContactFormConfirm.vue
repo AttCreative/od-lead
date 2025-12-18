@@ -264,4 +264,104 @@ const onSubmit = async () => {
   color: #000;
   border: 1px solid #dfdfdf;
 }
+
+@media (max-width: 1024px) {
+  .contact-confirm {
+    width: 85%;
+    margin: 32px auto 64px;
+  }
+
+  .contact-confirm-note {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .contact-confirm-stack {
+    width: 80%;
+  }
+
+  .contact-confirm-label,
+  .contact-confirm-value {
+    width: 90%;
+    font-size: 15px;
+  }
+
+  .privacy-policy-main-text {
+    width: 60%;
+    height: 280px;
+    font-size: 13px;
+    margin-top: 28px;
+  }
+
+  .privacy-policy-main-text :deep(h3) {
+    font-size: 15px;
+  }
+
+  .contact-confirm-agree {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .contact-confirm-actions {
+    gap: 40px;
+    margin-top: 48px;
+  }
+
+  .contact-confirm-submit-btn,
+  .contact-confirm-back-btn {
+    font-size: 20px;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-confirm {
+    width: 90%;
+    margin: 0 auto 12px;
+  }
+
+  .contact-confirm-note {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .contact-confirm-stack {
+    width: 100%;
+  }
+
+  .contact-confirm-label,
+  .contact-confirm-value {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .privacy-policy-main-text {
+    width: 100%;
+    height: 240px;
+    font-size: 12px;
+    margin-top: 24px;
+  }
+
+  .privacy-policy-main-text :deep(h3) {
+    font-size: 14px;
+  }
+
+  .contact-confirm-agree {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+
+  .contact-confirm-actions {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .contact-confirm-submit-btn,
+  .contact-confirm-back-btn {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 16px;
+  }
+}
 </style>

@@ -10,7 +10,6 @@
       <div class="info-footer-jp">お問い合わせ</div>
       <img
         src="/images/common/arrow-right-white.svg"
-        alt=""
         class="arrow-right-icon"
         aria-hidden="true"
       />
@@ -18,7 +17,7 @@
   </NuxtLink>
 
   <div class="footer-company">
-    <img src="/images/common/company-logo.svg" alt="会社ロゴ画像" />
+    <img src="/images/common/company-logo.svg" />
     <div>
       <div>〒231-0052</div>
       <div>神奈川県横浜市中区英町5番地7</div>

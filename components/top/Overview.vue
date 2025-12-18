@@ -15,7 +15,7 @@
       >
         <div class="overview-list-card">
           <div class="overview-list-image-area">
-            <img :src="item.img" :alt="item.alt" class="overview-list-image" />
+            <img :src="item.img" class="overview-list-image" />
             <div class="overview-list-overlay">
               <div class="overview-list-headline">{{ item.title }}</div>
               <p class="overview-list-text">{{ item.description }}</p>
@@ -23,7 +23,6 @@
             <div class="overview-list-more">
               <img
                 src="/images/common/arrow-right-white.svg"
-                alt=""
                 class="overview-list-more-icon"
                 aria-hidden="true"
               />
@@ -39,21 +38,18 @@
 const overviewItems = [
   {
     img: "/images/top/over-view-rental.svg",
-    alt: "不動産賃貸・管理事業画像",
     title: "RENTAL & MANAGEMENT",
     description: "不動産賃貸・管理事業",
     to: "/rental",
   },
   {
     img: "/images/top/over-view-sales.svg",
-    alt: "不動産売買・再販事業画像",
     title: "SALES & RESALE",
     description: "不動産売買・再販事業",
     to: "/sales",
   },
   {
     img: "/images/top/over-view-renovation.svg",
-    alt: "リフォーム事業画像",
     title: "RENOVATION & DESIGN",
     description: "リフォーム事業",
     to: "/renovation",
@@ -95,6 +91,8 @@ const overviewItems = [
   gap: 24px;
   justify-content: center;
   margin-top: 32px;
+  padding: 0 5%;
+  box-sizing: border-box;
 }
 
 .overview-list-link {
@@ -175,5 +173,51 @@ const overviewItems = [
 .overview-list-more-icon {
   width: 48px;
   height: 48px;
+}
+
+@media (max-width: 1024px) {
+  .overview-list-row {
+    margin-top: 80px;
+  }
+
+  .overview-list-title {
+    font-size: 48px;
+  }
+  .overview-list-description {
+    font-size: 18px;
+  }
+  .overview-list-headline {
+    font-size: 14px;
+  }
+  .overview-list-text {
+    font-size: 18px;
+  }
+  .overview-list-more-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-list-row {
+    margin-top: 60px;
+  }
+
+  .overview-list-title {
+    font-size: 36px;
+  }
+  .overview-list-description {
+    font-size: 16px;
+  }
+  .overview-list-headline {
+    font-size: 8px;
+  }
+  .overview-list-text {
+    font-size: 8px;
+  }
+  .overview-list-more-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 </style>

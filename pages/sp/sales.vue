@@ -2,11 +2,7 @@
   <div class="sales-page">
     <PageSpHeader title="SALES & RESALE" subtitle="不動産売買・再販事業" />
 
-    <img
-      src="/public/images/sales/sales.svg"
-      alt="セールス画像"
-      class="sales-page-hero-image"
-    />
+    <img src="/public/images/sales/sales.svg" class="sales-page-hero-image" />
 
     <div class="sales-page-intro-strong">
       <p>
@@ -46,7 +42,6 @@
       </div>
       <img
         src="/public/images/sales/sales-feature.svg"
-        alt="セールス画像2"
         class="sales-page-image"
       />
     </div>
@@ -73,7 +68,6 @@
       </div>
       <img
         src="/public/images/sales/sp/sales-support-process.svg"
-        alt="セールス画像3"
         class="sales-page-image"
       />
     </div>
@@ -100,7 +94,6 @@
       </div>
       <img
         src="/public/images/sales/sp/sales-transaction.svg"
-        alt="セールス画像4"
         class="sales-page-image"
       />
     </div>

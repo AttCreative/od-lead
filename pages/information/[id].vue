@@ -1,8 +1,15 @@
 <template>
   <div class="information-detail">
-    <PageHeader title="INFORMATION" subtitle="お知らせ・最新情報" />
+    <component
+      :is="isMobile ? PageSpHeader : PageHeader"
+      title="INFORMATION"
+      subtitle="お知らせ・最新情報"
+    />
 
-    <Breadcrumbs :items="[{ label: currentItem?.title || '' }]" />
+    <Breadcrumbs
+      v-if="!isMobile"
+      :items="[{ label: currentItem?.title || '' }]"
+    />
 
     <div class="information-detail-meta">
       <div class="information-detail-date">{{ currentItem?.date }}</div>
@@ -18,11 +25,7 @@
     </div>
 
     <div class="information-detail-image-area">
-      <img
-        :src="currentItem?.img"
-        :alt="currentItem?.alt"
-        class="information-detail-image"
-      />
+      <img :src="currentItem?.img" class="information-detail-image" />
     </div>
   </div>
 </template>
@@ -31,15 +34,17 @@
 import { useRoute } from "vue-router";
 import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import PageHeader from "@/components/common/PageHeader.vue";
+import PageSpHeader from "@/components/common/PageSpHeader.vue";
 
 usePageTitle("INFORMATION");
+
+const isMobile = useIsMobile();
 
 const infoItems = [
   {
     id: 1,
     img: "/images/information/renewal.svg",
-    alt: "情報画像1",
-    date: "2025.01.01",
+    date: "2025.12.11",
     tag: "お知らせ",
     title: "ホームページリニューアルのお知らせ",
     text: `平素よりリード株式会社のホームページをご覧いただき、誠にありがとうございます。
@@ -115,5 +120,52 @@ const paragraphs = currentItem?.text.split("\n") ?? [];
   display: inline-block;
   width: 60%;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .information-detail-meta {
+    width: 90%;
+    margin: 40px auto 0;
+    gap: 12px;
+  }
+
+  .information-detail-date {
+    font-size: 16px;
+  }
+
+  .information-detail-tag {
+    font-size: 12px;
+    width: auto;
+    min-width: 80px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 8px;
+  }
+
+  .information-detail-headline {
+    width: 90%;
+    font-size: 22px;
+    margin: 8px auto 32px;
+  }
+
+  .information-detail-body {
+    width: 90%;
+    font-size: 14px;
+    margin: 0 auto 32px;
+  }
+
+  .information-detail-body p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+
+  .information-detail-image-area {
+    margin-top: 8px;
+  }
+
+  .information-detail-image {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 </style>

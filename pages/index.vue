@@ -1,11 +1,7 @@
 <template>
   <div class="home-page">
     <div class="home-page-hero">
-      <img
-        src="/images/common/company.svg"
-        alt="トップ画像"
-        class="home-page-hero-img"
-      />
+      <img src="/images/common/company.svg" class="home-page-hero-img" />
       <div class="home-page-hero-overlay">
         <div class="home-page-hero-text">
           <div>人と街を、安心でつなぐ。</div>
@@ -33,8 +29,7 @@ const infoItems = [
   {
     id: 1,
     img: "/images/top/catchphrase.svg",
-    alt: "情報画像1",
-    date: "2025.01.01",
+    date: "2025.12.11",
     tag: "お知らせ",
     title: "ホームページリニューアルのお知らせ",
   },
@@ -66,7 +61,7 @@ const infoItems = [
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  padding-bottom: 96px;
+  padding-bottom: 5%;
 }
 .home-page-hero-text {
   color: #fff;
@@ -75,5 +70,19 @@ const infoItems = [
   line-height: 1.2;
   margin-left: 5%;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1024px) {
+  .home-page-hero-text {
+    font-size: 32px;
+    margin-left: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page-hero-text {
+    font-size: 20px;
+    margin-left: 2%;
+  }
 }
 </style>

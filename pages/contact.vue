@@ -1,15 +1,15 @@
 <template>
   <div class="contact-page">
-    <PageHeader title="CONTACT US" subtitle="お問い合わせ" />
+    <component
+      :is="isMobile ? PageSpHeader : PageHeader"
+      title="CONTACT US"
+      subtitle="お問い合わせ"
+    />
 
-    <Breadcrumbs :items="[{ label: 'お問い合わせ' }]" />
+    <Breadcrumbs v-if="!isMobile" :items="[{ label: 'お問い合わせ' }]" />
 
     <div class="contact-page-hero">
-      <img
-        src="/images/contact/contact-us.svg"
-        alt="お問い合わせ画像"
-        class="contact-page-hero-img"
-      />
+      <img src="/images/contact/contact-us.svg" class="contact-page-hero-img" />
     </div>
 
     <div class="contact-page-wrap">
@@ -32,6 +32,7 @@ import { ref } from "vue";
 import { useContactStore } from "@/stores/contact";
 import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import PageHeader from "@/components/common/PageHeader.vue";
+import PageSpHeader from "@/components/common/PageSpHeader.vue";
 import StepIndicator from "@/components/contact/StepIndicator.vue";
 import ContactFormInput from "@/components/contact/ContactFormInput.vue";
 import ContactFormConfirm from "@/components/contact/ContactFormConfirm.vue";
@@ -41,6 +42,8 @@ import type { Step } from "@/types/contact";
 usePageTitle("CONTACT US");
 
 definePageMeta({ layout: "contact" });
+
+const isMobile = useIsMobile();
 
 const store = useContactStore();
 
@@ -81,5 +84,20 @@ onUnmounted(() => {
 .contact-page-wrap {
   width: 80%;
   margin: 0 auto 80px;
+}
+
+@media (max-width: 768px) {
+  .contact-page-hero {
+    margin: 32px 0 48px;
+  }
+
+  .contact-page-hero-img {
+    width: 100%;
+  }
+
+  .contact-page-wrap {
+    width: 90%;
+    margin: 0 auto 48px;
+  }
 }
 </style>

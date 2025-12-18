@@ -1,11 +1,7 @@
 <template>
   <div class="catchphrase-section">
     <div class="catchphrase-section-image">
-      <img
-        src="/images/top/catchphrase.svg"
-        alt="キャッチフレーズ画像"
-        class="catchphrase-section-img"
-      />
+      <img src="/images/top/catchphrase.svg" class="catchphrase-section-img" />
     </div>
 
     <div class="catchphrase-section-text">
@@ -70,5 +66,76 @@
   font-weight: 500;
   font-size: 20px;
   margin: 12px 0 0 0;
+}
+
+@media (max-width: 1024px) {
+  .catchphrase-section {
+    margin-top: 72px;
+    padding: 0 48px;
+  }
+
+  .catchphrase-section-image {
+    flex: 0 0 40%;
+  }
+
+  .catchphrase-section-img {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+
+  .catchphrase-section-text {
+    padding: 0 8px;
+  }
+
+  .catchphrase-section-title,
+  .catchphrase-section-highlight {
+    font-size: 28px;
+  }
+
+  .catchphrase-section-subtext {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catchphrase-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+    padding: 0 16px;
+  }
+
+  .catchphrase-section-image {
+    flex: 0 0 auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .catchphrase-section-img {
+    width: 100%;
+    max-width: 320px;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+
+  .catchphrase-section-text {
+    flex: 0 0 auto;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .catchphrase-section-title,
+  .catchphrase-section-highlight {
+    font-size: 24px;
+  }
+
+  .catchphrase-section-subtext {
+    font-size: 14px;
+  }
 }
 </style>

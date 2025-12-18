@@ -1,6 +1,10 @@
 <template>
   <div class="rental-page">
-    <PageHeader title="RENTAL & MANAGEMENT" subtitle="不動産賃貸・管理事業" />
+    <component
+      :is="isTablet ? PageTabletHeader : PageHeader"
+      title="RENTAL & MANAGEMENT"
+      subtitle="不動産賃貸・管理事業"
+    />
 
     <Breadcrumbs
       :items="[
@@ -12,7 +16,6 @@
     <div class="rental-page-hero">
       <img
         src="/public/images/rental/rental.svg"
-        alt="レンタル画像"
         class="rental-page-hero-img"
       />
     </div>
@@ -39,7 +42,6 @@
     <div class="rental-page-section-image">
       <img
         src="/public/images/rental/rental-brokerage-service.svg"
-        alt="レンタル画像2"
         class="rental-page-image-sm"
       />
     </div>
@@ -48,7 +50,6 @@
     <div class="rental-page-section-image">
       <img
         src="/public/images/rental/tenant-voices.svg"
-        alt="レンタル画像3"
         class="rental-page-image-sm"
       />
     </div>
@@ -57,7 +58,6 @@
     <div class="rental-page-section-image">
       <img
         src="/public/images/rental/our-strengths.svg"
-        alt="レンタル画像4"
         class="rental-page-image-sm"
       />
     </div>
@@ -67,12 +67,15 @@
 <script setup lang="ts">
 import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import PageHeader from "@/components/common/PageHeader.vue";
+import PageTabletHeader from "@/components/common/PageTabletHeader.vue";
 
 usePageTitle("RENTAL & MANAGEMENT");
 
 definePageMeta({
   middleware: ["ua-device-redirect"],
 });
+
+const isTablet = useIsTablet();
 </script>
 
 <style scoped lang="scss">
