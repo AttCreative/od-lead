@@ -3,14 +3,14 @@
     <div class="about-section-text">
       <div class="about-section-header">
         <div class="about-section-title">ABOUT US</div>
-        <div class="about-section-subtitle">Lead株式会社について</div>
+        <div class="about-section-subtitle">リード株式会社について</div>
       </div>
       <div class="about-section-lead">
         街の未来を見つめ、<br />
         住まいに想いを込める企業へ。
       </div>
       <div class="about-section-body">
-        Leadは、地域に根ざした不動産のプロフェッショナルとして、一つひとつの住まいに丁寧な価値を吹き込み、安心して暮らせる街づくりを目指しています。中古住宅の再生事業を中心に、品質と価格のバランスにこだわり、「選ばれる再販」を実現し続けることで、お客様の信頼に応えてまいります。私たちは、社員一人ひとりの誠実な仕事を積み重ね、地域とともに歩む企業であり続けます。
+        リード株式会社は、地域に根ざした不動産のプロフェッショナルとして、一つひとつの住まいに丁寧な価値を吹き込み、安心して暮らせる街づくりを目指しています。中古住宅の再生事業を中心に、品質と価格のバランスにこだわり、「選ばれる再販」を実現し続けることで、お客様の信頼に応えてまいります。私たちは、社員一人ひとりの誠実な仕事を積み重ね、地域とともに歩む企業であり続けます。
       </div>
     </div>
 

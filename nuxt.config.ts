@@ -33,11 +33,11 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "LEAD.incの最新情報やお知らせを掲載しています。サービス更新、重要なお知らせなどをご確認いただけます。",
+            "リード株式会社の最新情報やお知らせを掲載しています。サービス更新、重要なお知らせなどをご確認いただけます。",
         },
         {
           name: "keywords",
-          content: "Read",
+          content: "リード",
         },
       ],
     },
