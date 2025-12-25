@@ -67,39 +67,169 @@
     </div>
 
     <div class="renovation-page-section-title">施工事例：価値再設計の実績</div>
-    <div class="renovation-page-row">
-      <div class="renovation-page-col">
-        <img
-          src="/public/images/renovation/renovation-before-after-01.svg"
-          class="renovation-page-image-md"
-        />
-      </div>
-      <div class="renovation-page-col">
-        <img
-          src="/public/images/renovation/renovation-before-after-02.svg"
-          class="renovation-page-image-md"
-        />
-      </div>
-    </div>
 
-    <div class="renovation-page-row">
-      <div class="renovation-page-col">
-        <p class="renovation-page-case-title">築30年戸建ての全面改装</p>
-        <p class="renovation-page-case-text">
-          構造補強と断熱改修を行いながら、開放的なLDKと家事動線を重視した間取りへ。
-        </p>
-        <p class="renovation-page-case-text">
-          家族の時間を大切にする空間を実現しました。
-        </p>
-      </div>
-      <div class="renovation-page-col">
-        <p class="renovation-page-case-title">都心マンションの効率化</p>
-        <p class="renovation-page-case-text">
-          限られた空間を最大限に活用する収納計画と、 光を取り込む工夫で、
-        </p>
-        <p class="renovation-page-case-text">
-          狭さを感じさせない快適な住まいへと生まれ変わりました。
-        </p>
+    <div class="renovation-page-section-content renovation-photos">
+      <div class="photo-groups">
+        <div class="photo-group photo-group-1">
+          <div class="renovation-photo-title">築56年リフォーム前</div>
+          <div class="photo-row photo-row-1">
+            <img
+              src="/images/renovation/56-years-old-before-renovation1.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-before-renovation1.png'
+                )
+              "
+            />
+          </div>
+          <div class="photo-row photo-row-3">
+            <img
+              src="/images/renovation/56-years-old-before-renovation2.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-before-renovation2.png'
+                )
+              "
+            />
+            <img
+              src="/images/renovation/56-years-old-before-renovation3.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-before-renovation3.png'
+                )
+              "
+            />
+            <img
+              src="/images/renovation/56-years-old-before-renovation4.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-before-renovation4.png'
+                )
+              "
+            />
+          </div>
+          <div class="photo-row photo-row-3">
+            <img
+              src="/images/renovation/56-years-old-before-renovation5.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-before-renovation5.png'
+                )
+              "
+            />
+            <img
+              src="/images/renovation/56-years-old-before-renovation6.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-before-renovation6.png'
+                )
+              "
+            />
+            <img
+              src="/images/renovation/56-years-old-before-renovation7.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-before-renovation7.png'
+                )
+              "
+            />
+          </div>
+        </div>
+
+        <div class="photo-group photo-group-2">
+          <div class="renovation-photo-title">築56年リフォーム後</div>
+          <div class="photo-row photo-row-2">
+            <img
+              src="/images/renovation/56-years-old-after-renovation1.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-after-renovation1.png'
+                )
+              "
+            />
+            <img
+              src="/images/renovation/56-years-old-after-renovation2.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-after-renovation2.png'
+                )
+              "
+            />
+          </div>
+          <div class="photo-row photo-row-3">
+            <img
+              src="/images/renovation/56-years-old-after-renovation3.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-after-renovation3.png'
+                )
+              "
+            />
+            <img
+              src="/images/renovation/56-years-old-after-renovation4.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-after-renovation4.png'
+                )
+              "
+            />
+            <img
+              src="/images/renovation/56-years-old-after-renovation5.png"
+              class="photo"
+              @click="
+                openImageModal(
+                  '/images/renovation/56-years-old-after-renovation5.png'
+                )
+              "
+            />
+          </div>
+        </div>
+
+        <div class="photo-group photo-group-3">
+          <div class="renovation-photo-title">築40年リフォーム後</div>
+          <div class="photo-row photo-row-2-vertical">
+            <img
+              src="/images/renovation/40-years-old-after-renovation1.png"
+              class="photo photo-left"
+              @click="
+                openImageModal(
+                  '/images/renovation/40-years-old-after-renovation1.png'
+                )
+              "
+            />
+            <div class="photo-right-col">
+              <img
+                src="/images/renovation/40-years-old-after-renovation2.png"
+                class="photo photo-right"
+                @click="
+                  openImageModal(
+                    '/images/renovation/40-years-old-after-renovation2.png'
+                  )
+                "
+              />
+              <img
+                src="/images/renovation/40-years-old-after-renovation3.png"
+                class="photo photo-right"
+                @click="
+                  openImageModal(
+                    '/images/renovation/40-years-old-after-renovation3.png'
+                  )
+                "
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -136,12 +266,14 @@
       </div>
     </div>
   </div>
+  <ImageModal v-model:image-src="modalImageSrc" />
 </template>
 
 <script setup lang="ts">
 import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import PageHeader from "@/components/common/PageHeader.vue";
 import PageTabletHeader from "@/components/common/PageTabletHeader.vue";
+import ImageModal from "@/components/common/ImageModal.vue";
 
 usePageTitle("RENOVATION & DESIGN");
 
@@ -150,6 +282,12 @@ definePageMeta({
 });
 
 const isTablet = useIsTablet();
+
+const modalImageSrc = ref<string | null>(null);
+
+const openImageModal = (src: string) => {
+  modalImageSrc.value = src;
+};
 </script>
 
 <style scoped lang="scss">
@@ -288,5 +426,97 @@ const isTablet = useIsTablet();
   margin-right: auto;
   padding-left: 25px;
   line-height: 1;
+}
+
+.renovation-page-section-content {
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+.renovation-photo-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 24px auto 16px;
+}
+
+.renovation-page-section-content.renovation-photos {
+  width: 85%;
+  margin: 0 auto 32px;
+
+  --h: 160px;
+  --h-2: 240px;
+  --h-3: 240px;
+}
+
+.renovation-page-section-content.renovation-photos .photo-row {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.renovation-page-section-content.renovation-photos .photo-row-1 {
+  grid-template-columns: 1fr;
+}
+
+.renovation-page-section-content.renovation-photos .photo-row-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.renovation-page-section-content.renovation-photos .photo-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.renovation-page-section-content.renovation-photos img.photo {
+  width: 100%;
+  height: var(--h);
+  display: block;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.renovation-page-section-content.renovation-photos .photo-row-2-vertical {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0;
+}
+
+.renovation-page-section-content.renovation-photos
+  .photo-row-2-vertical
+  .photo-left {
+  height: calc(var(--h) * 2);
+}
+
+.renovation-page-section-content.renovation-photos
+  .photo-row-2-vertical
+  .photo-right-col {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0;
+}
+
+.renovation-page-section-content.renovation-photos
+  .photo-row-2-vertical
+  .photo-right {
+  height: var(--h);
+}
+
+.renovation-page-section-content.renovation-photos .photo-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.renovation-page-section-content.renovation-photos .photo-group-2 {
+  --h: var(--h-2);
+}
+
+.renovation-page-section-content.renovation-photos .photo-group-3 {
+  grid-column: 1 / -1;
+  width: calc((100% - 16px) / 2);
+  justify-self: start;
+  --h: var(--h-3);
 }
 </style>
