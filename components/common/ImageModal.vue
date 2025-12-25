@@ -15,7 +15,7 @@
       ×
     </button>
 
-    <img :src="imageSrc" class="image-modal-image" alt="" />
+    <NuxtImg format="webp" :src="imageSrc" class="image-modal-image" alt="" />
   </div>
 </template>
 

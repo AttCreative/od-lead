@@ -78,7 +78,9 @@
     >
       <div class="renovation-photo-title">築56年リフォーム前</div>
       <div class="photo-row photo-row-1">
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-before-renovation1.png"
           class="photo"
           @click="
@@ -89,7 +91,9 @@
         />
       </div>
       <div class="photo-row photo-row-3">
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-before-renovation2.png"
           class="photo"
           @click="
@@ -98,7 +102,9 @@
             )
           "
         />
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-before-renovation3.png"
           class="photo"
           @click="
@@ -107,7 +113,9 @@
             )
           "
         />
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-before-renovation4.png"
           class="photo"
           @click="
@@ -118,7 +126,9 @@
         />
       </div>
       <div class="photo-row photo-row-3">
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-before-renovation5.png"
           class="photo"
           @click="
@@ -127,7 +137,9 @@
             )
           "
         />
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-before-renovation6.png"
           class="photo"
           @click="
@@ -136,7 +148,9 @@
             )
           "
         />
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-before-renovation7.png"
           class="photo"
           @click="
@@ -149,7 +163,9 @@
 
       <div class="renovation-photo-title">築56年リフォーム後</div>
       <div class="photo-row photo-row-2">
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-after-renovation1.png"
           class="photo"
           @click="
@@ -158,7 +174,9 @@
             )
           "
         />
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-after-renovation2.png"
           class="photo"
           @click="
@@ -169,7 +187,9 @@
         />
       </div>
       <div class="photo-row photo-row-3">
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-after-renovation3.png"
           class="photo"
           @click="
@@ -178,7 +198,9 @@
             )
           "
         />
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-after-renovation4.png"
           class="photo"
           @click="
@@ -187,7 +209,9 @@
             )
           "
         />
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/56-years-old-after-renovation5.png"
           class="photo"
           @click="
@@ -200,7 +224,9 @@
 
       <div class="renovation-photo-title">築40年リフォーム後</div>
       <div class="photo-row photo-row-2-vertical">
-        <img
+        <NuxtImg
+          format="webp"
+          loading="lazy"
           src="/images/renovation/40-years-old-after-renovation1.png"
           class="photo photo-left"
           @click="
@@ -210,7 +236,9 @@
           "
         />
         <div class="photo-right-col">
-          <img
+          <NuxtImg
+            format="webp"
+            loading="lazy"
             src="/images/renovation/40-years-old-after-renovation2.png"
             class="photo photo-right"
             @click="
@@ -219,7 +247,9 @@
               )
             "
           />
-          <img
+          <NuxtImg
+            format="webp"
+            loading="lazy"
             src="/images/renovation/40-years-old-after-renovation3.png"
             class="photo photo-right"
             @click="

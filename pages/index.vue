@@ -1,7 +1,11 @@
 <template>
   <div class="home-page">
     <div class="home-page-hero">
-      <img src="/images/common/company.jpg" class="home-page-hero-img" />
+      <NuxtImg
+        format="webp"
+        src="/images/common/company.png"
+        class="home-page-hero-img"
+      />
       <div class="home-page-hero-overlay">
         <div class="home-page-hero-text">
           <div>人と街を、安心でつなぐ。</div>

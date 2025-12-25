@@ -7,7 +7,11 @@
     />
 
     <div class="company-page-image-area">
-      <img src="/images/common/company.jpg" class="company-page-image" />
+      <NuxtImg
+        format="webp"
+        src="/images/common/company.png"
+        class="company-page-image"
+      />
     </div>
 
     <div class="company-page-header">

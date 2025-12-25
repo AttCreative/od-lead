@@ -43,7 +43,10 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/reset.css"],
-  modules: ["@pinia/nuxt"],
+  modules: ["@pinia/nuxt", "@nuxt/image"],
+  image: {
+    provider: "ipx",
+  },
 
   runtimeConfig: {
     zipCodeTokenUrl: process.env.ZIPCODE_TOKEN_URL || "",
