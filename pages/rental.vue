@@ -14,10 +14,7 @@
     />
 
     <div class="rental-page-hero">
-      <img
-        src="/public/images/rental/rental.svg"
-        class="rental-page-hero-img"
-      />
+      <img src="/images/rental/rental.svg" class="rental-page-hero-img" />
     </div>
 
     <div class="rental-page-intro-strong">
@@ -41,7 +38,7 @@
     <div class="rental-page-section-title">賃貸仲介サービス</div>
     <div class="rental-page-section-image">
       <img
-        src="/public/images/rental/rental-brokerage-service.svg"
+        src="/images/rental/rental-brokerage-service.svg"
         class="rental-page-image-sm"
       />
     </div>
@@ -49,7 +46,7 @@
     <div class="rental-page-section-title">入居者様の声</div>
     <div class="rental-page-section-image">
       <img
-        src="/public/images/rental/tenant-voices.svg"
+        src="/images/rental/tenant-voices.svg"
         class="rental-page-image-sm"
       />
     </div>
@@ -57,7 +54,7 @@
     <div class="rental-page-section-title">私たちの強み</div>
     <div class="rental-page-section-image">
       <img
-        src="/public/images/rental/our-strengths.svg"
+        src="/images/rental/our-strengths.svg"
         class="rental-page-image-sm"
       />
     </div>

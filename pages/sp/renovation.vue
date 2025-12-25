@@ -3,7 +3,7 @@
     <PageSpHeader title="RENOVATION & DESIGN" subtitle="リフォーム事業" />
 
     <img
-      src="/public/images/renovation/renovation.svg"
+      src="/images/renovation/renovation.svg"
       class="renovation-page-hero-image"
     />
 
@@ -28,7 +28,7 @@
       </div>
 
       <img
-        src="/public/images/renovation/home-renovation.svg"
+        src="/images/renovation/home-renovation.svg"
         class="renovation-page-image"
       />
     </div>
@@ -40,18 +40,18 @@
       リフォームサービス
       <img
         v-if="isBrokerageServiceOpen"
-        src="/public/images/common/arrow-top.svg"
+        src="/images/common/arrow-top.svg"
         class="renovation-page-section-arrow"
       />
       <img
         v-else
-        src="/public/images/common/arrow-bottom.svg"
+        src="/images/common/arrow-bottom.svg"
         class="renovation-page-section-arrow"
       />
     </div>
     <div v-if="isBrokerageServiceOpen" class="renovation-page-section-content">
       <img
-        src="/public/images/renovation/sp/rental-brokerage-service.svg"
+        src="/images/renovation/sp/rental-brokerage-service.svg"
         class="renovation-page-image"
       />
     </div>
@@ -63,12 +63,12 @@
       施工事例：価値再設計の実績
       <img
         v-if="isRenovationBeforeAfterOpen"
-        src="/public/images/common/arrow-top.svg"
+        src="/images/common/arrow-top.svg"
         class="renovation-page-section-arrow"
       />
       <img
         v-else
-        src="/public/images/common/arrow-bottom.svg"
+        src="/images/common/arrow-bottom.svg"
         class="renovation-page-section-arrow"
       />
     </div>
@@ -286,7 +286,7 @@
     </div>
   </div>
   <img
-    src="/public/images/renovation/consultation-support.svg"
+    src="/images/renovation/consultation-support.svg"
     class="renovation-page-image"
   />
   <ImageModal v-model:image-src="modalImageSrc" />

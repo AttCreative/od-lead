@@ -2,10 +2,7 @@
   <div class="rental-page">
     <PageSpHeader title="RENTAL & MANAGEMENT" subtitle="不動産賃貸・管理事業" />
 
-    <img
-      src="/public/images/rental/rental.svg"
-      class="rental-page-hero-image"
-    />
+    <img src="/images/rental/rental.svg" class="rental-page-hero-image" />
 
     <div class="rental-page-intro-strong">
       <p>この街をよく知る私たちが、“この街らしい暮らし”を支えます。</p>
@@ -28,12 +25,12 @@
       賃貸仲介サービス
       <img
         v-if="isBrokerageServiceOpen"
-        src="/public/images/common/arrow-top.svg"
+        src="/images/common/arrow-top.svg"
         class="rental-page-section-arrow"
       />
       <img
         v-else
-        src="/public/images/common/arrow-bottom.svg"
+        src="/images/common/arrow-bottom.svg"
         class="rental-page-section-arrow"
       />
     </div>
@@ -43,7 +40,7 @@
         契約手続きまで一貫して対応します。お客様のご要望を丁寧にお聞きし、理想の住まい探しをお手伝いします。
       </div>
       <img
-        src="/public/images/rental/sp/rental-brokerage-service.svg"
+        src="/images/rental/sp/rental-brokerage-service.svg"
         class="rental-page-image"
       />
     </div>
@@ -55,18 +52,18 @@
       入居者様の声
       <img
         v-if="isTenantVoiceOpen"
-        src="/public/images/common/arrow-top.svg"
+        src="/images/common/arrow-top.svg"
         class="rental-page-section-arrow"
       />
       <img
         v-else
-        src="/public/images/common/arrow-bottom.svg"
+        src="/images/common/arrow-bottom.svg"
         class="rental-page-section-arrow"
       />
     </div>
     <div v-if="isTenantVoiceOpen" class="rental-page-section-content">
       <img
-        src="/public/images/rental/sp/tenant-voices.svg"
+        src="/images/rental/sp/tenant-voices.svg"
         class="rental-page-image"
       />
     </div>
@@ -74,7 +71,7 @@
     <div class="rental-page-section-title">私たちの強み</div>
     <div class="rental-page-section-content">
       <img
-        src="/public/images/rental/sp/our-strengths.svg"
+        src="/images/rental/sp/our-strengths.svg"
         class="rental-page-image"
       />
       <div class="rental-page-our-strengths-text">
