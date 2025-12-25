@@ -9,10 +9,7 @@
     <Breadcrumbs v-if="!isMobile" :items="[{ label: '採用情報' }]" />
 
     <div class="recruit-page-hero">
-      <img
-        src="/public/images/recruit/recruit.svg"
-        class="recruit-page-hero-img"
-      />
+      <img src="/images/recruit/recruit.svg" class="recruit-page-hero-img" />
     </div>
 
     <div class="recruit-page-intro-strong">

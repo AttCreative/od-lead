@@ -15,7 +15,7 @@
 
     <div class="renovation-page-hero">
       <img
-        src="/public/images/renovation/renovation.svg"
+        src="/images/renovation/renovation.svg"
         class="renovation-page-hero-img"
       />
     </div>
@@ -44,7 +44,7 @@
     <div class="renovation-page-row">
       <div class="renovation-page-col-img">
         <img
-          src="/public/images/renovation/home-renovation.svg"
+          src="/images/renovation/home-renovation.svg"
           class="renovation-page-image-sm"
         />
       </div>
@@ -61,7 +61,7 @@
     <hr class="renovation-page-divider" />
     <div class="renovation-page-section-image">
       <img
-        src="/public/images/renovation/rental-brokerage-service.svg"
+        src="/images/renovation/rental-brokerage-service.svg"
         class="renovation-page-image-sm"
       />
     </div>
@@ -290,7 +290,7 @@
       </div>
       <div class="renovation-page-col">
         <img
-          src="/public/images/renovation/consultation-support.svg"
+          src="/images/renovation/consultation-support.svg"
           class="renovation-page-image-md"
         />
       </div>

@@ -2,7 +2,7 @@
   <div class="sales-page">
     <PageSpHeader title="SALES & RESALE" subtitle="不動産売買・再販事業" />
 
-    <img src="/public/images/sales/sales.svg" class="sales-page-hero-image" />
+    <img src="/images/sales/sales.svg" class="sales-page-hero-image" />
 
     <div class="sales-page-intro-strong">
       <p>
@@ -40,10 +40,7 @@
           また、地域コミュニティとのつながりも大切にし、持続可能な街づくりに貢献します。
         </div>
       </div>
-      <img
-        src="/public/images/sales/sales-feature.svg"
-        class="sales-page-image"
-      />
+      <img src="/images/sales/sales-feature.svg" class="sales-page-image" />
     </div>
 
     <div
@@ -53,12 +50,12 @@
       私たちのサポートプロセス
       <img
         v-if="isSupportProcessOpen"
-        src="/public/images/common/arrow-top.svg"
+        src="/images/common/arrow-top.svg"
         class="sales-page-section-arrow"
       />
       <img
         v-else
-        src="/public/images/common/arrow-bottom.svg"
+        src="/images/common/arrow-bottom.svg"
         class="sales-page-section-arrow"
       />
     </div>
@@ -67,7 +64,7 @@
         お客様と二人三脚で、地域に根ざした価値づくりを実現します。どの段階からでもお気軽にご相談ください。
       </div>
       <img
-        src="/public/images/sales/sp/sales-support-process.svg"
+        src="/images/sales/sp/sales-support-process.svg"
         class="sales-page-image"
       />
     </div>
@@ -79,12 +76,12 @@
       不動産売買
       <img
         v-if="isTransactionOpen"
-        src="/public/images/common/arrow-top.svg"
+        src="/images/common/arrow-top.svg"
         class="sales-page-section-arrow"
       />
       <img
         v-else
-        src="/public/images/common/arrow-bottom.svg"
+        src="/images/common/arrow-bottom.svg"
         class="sales-page-section-arrow"
       />
     </div>
@@ -93,7 +90,7 @@
         個人のお客様にも、再販事業で培った経験と知識を活かした丁寧な仲介サービスを提供しています。
       </div>
       <img
-        src="/public/images/sales/sp/sales-transaction.svg"
+        src="/images/sales/sp/sales-transaction.svg"
         class="sales-page-image"
       />
     </div>

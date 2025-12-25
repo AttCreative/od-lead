@@ -10,10 +10,7 @@
     <Breadcrumbs v-if="!isMobile" :items="[{ label: 'メッセージ' }]" />
 
     <div class="message-page-hero">
-      <img
-        src="/public/images/message/message.svg"
-        class="message-page-hero-img"
-      />
+      <img src="/images/message/message.svg" class="message-page-hero-img" />
     </div>
 
     <h2 class="message-h2">ごあいさつ</h2>
