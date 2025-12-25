@@ -148,6 +148,9 @@ const currentIndex = computed(() => {
 
   .contact-step-indicator-step-inner {
     gap: 4px;
+    display: flex;
+    flex-direction: column;
+    width: 70px;
   }
 
   .contact-step-indicator-step-num {
@@ -155,7 +158,7 @@ const currentIndex = computed(() => {
   }
 
   .contact-step-indicator-step-label {
-    font-size: 8px;
+    font-size: 10px;
   }
 }
 </style>

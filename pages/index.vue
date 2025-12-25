@@ -1,11 +1,11 @@
 <template>
   <div class="home-page">
     <div class="home-page-hero">
-      <img src="/images/common/company.svg" class="home-page-hero-img" />
+      <img src="/images/common/company.jpg" class="home-page-hero-img" />
       <div class="home-page-hero-overlay">
         <div class="home-page-hero-text">
           <div>人と街を、安心でつなぐ。</div>
-          <div>Leadが届ける住まいの新たな価値を。</div>
+          <div>リード株式会社が届ける住まいの新たな価値を。</div>
         </div>
       </div>
     </div>
@@ -29,7 +29,7 @@ const infoItems = [
   {
     id: 1,
     img: "/images/top/catchphrase.svg",
-    date: "2025.12.11",
+    date: "2025.12.25",
     tag: "お知らせ",
     title: "ホームページリニューアルのお知らせ",
   },

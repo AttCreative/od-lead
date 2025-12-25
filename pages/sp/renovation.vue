@@ -9,11 +9,11 @@
 
     <div class="renovation-page-intro-strong">
       再販で鍛えた、実戦的リフォーム力。<br />
-      Leadだからできる、高品質×適正価格の空間提案。
+      リード株式会社だからできる、高品質×適正価格の空間提案。
     </div>
 
     <div class="renovation-page-intro-text">
-      Leadは、再販事業で培ってきた豊富なリフォーム実績を活かし、戸建て・マンションを問わず、あらゆる住まいに対して最適なプランをご提案します。<br />
+      リード株式会社は、再販事業で培ってきた豊富なリフォーム実績を活かし、戸建て・マンションを問わず、あらゆる住まいに対して最適なプランをご提案します。<br />
       単なる修繕にとどまらず、生活導線やデザイン性まで考慮した空間づくりにより、「住みやすさ」と「付加価値」を両立したリフォームを実現しています。<br />
       物件の価値を高めるだけでなく、お客様のライフスタイルにフィットする住まいの再設計を目指しています。
     </div>
@@ -37,7 +37,7 @@
       class="renovation-page-section-title renovation-page-accordion-toggle"
       @click="isBrokerageServiceOpen = !isBrokerageServiceOpen"
     >
-      賃貸仲介サービスの流れ
+      リフォームサービス
       <img
         v-if="isBrokerageServiceOpen"
         src="/public/images/common/arrow-top.svg"
@@ -107,7 +107,7 @@
     </div>
     <div class="renovation-page-section-content">
       <div>
-        Leadは再販事業で培った経験と技術力で、あなたの住まいに最適なリフォームプランを
+        リード株式会社は再販事業で培った経験と技術力で、あなたの住まいに最適なリフォームプランを
         ご提案します。お客様のライフスタイルや将来のビジョンを伺いながら、
         「住みやすさ」と「付加価値」を両立した空間づくりを実現します。
       </div>

@@ -2,7 +2,7 @@
   <div class="footer-company">
     <div>
       <div>〒231-0052</div>
-      <div>神奈川県横浜市中区英町5番地7</div>
+      <div>横浜市中区英町1番地隆峰ビル301号</div>
       <NuxtLink
         to="/privacy"
         class="privacy-policy-link"

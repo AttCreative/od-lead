@@ -199,6 +199,32 @@ const overviewItems = [
 }
 
 @media (max-width: 768px) {
+  .overview-list-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .overview-list-link {
+    width: 100%;
+  }
+
+  .overview-list-grid {
+    width: 100%;
+  }
+
+  .overview-list-image-area {
+    height: 160px;
+  }
+
+  .overview-list-image {
+    display: inline-block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .overview-list-row {
     margin-top: 60px;
   }
@@ -210,10 +236,10 @@ const overviewItems = [
     font-size: 16px;
   }
   .overview-list-headline {
-    font-size: 8px;
+    font-size: 16px;
   }
   .overview-list-text {
-    font-size: 8px;
+    font-size: 14px;
   }
   .overview-list-more-icon {
     width: 20px;
