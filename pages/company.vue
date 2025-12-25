@@ -260,7 +260,11 @@ const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURICompo
   }
 
   .company-page-image {
+    display: inline-block;
     width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
   }
 
   .company-page-details {

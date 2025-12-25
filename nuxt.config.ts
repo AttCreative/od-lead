@@ -37,7 +37,7 @@ export default defineNuxtConfig({
         },
         {
           name: "keywords",
-          content: "リード",
+          content: "リード, リード株式会社, LEAD, 不動産, リフォーム, 横浜",
         },
       ],
     },
