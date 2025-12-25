@@ -33,17 +33,20 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "LEAD.incの最新情報やお知らせを掲載しています。サービス更新、重要なお知らせなどをご確認いただけます。",
+            "リード株式会社の最新情報やお知らせを掲載しています。サービス更新、重要なお知らせなどをご確認いただけます。",
         },
         {
           name: "keywords",
-          content: "Read",
+          content: "リード, リード株式会社, LEAD, 不動産, リフォーム, 横浜",
         },
       ],
     },
   },
   css: ["~/assets/reset.css"],
-  modules: ["@pinia/nuxt"],
+  modules: ["@pinia/nuxt", "@nuxt/image"],
+  image: {
+    provider: "ipx",
+  },
 
   runtimeConfig: {
     zipCodeTokenUrl: process.env.ZIPCODE_TOKEN_URL || "",

@@ -7,7 +7,11 @@
     />
 
     <div class="company-page-image-area">
-      <img src="/images/common/company.svg" class="company-page-image" />
+      <NuxtImg
+        format="webp"
+        src="/images/common/company.png"
+        class="company-page-image"
+      />
     </div>
 
     <div class="company-page-header">
@@ -37,7 +41,7 @@
       <Line class="company-page-line" />
       <div class="company-page-row">
         <div class="company-page-label">所在地</div>
-        <div class="company-page-value">〒231-0052　横浜市中区英町5番地7</div>
+        <div class="company-page-value">〒231-0052　{{ address }}</div>
       </div>
 
       <Line class="company-page-line" />
@@ -75,15 +79,19 @@
       <Line class="company-page-line" />
       <div class="company-page-row">
         <div class="company-page-label">電話番号</div>
-        <div class="company-page-value">045-271-0721</div>
+        <div class="company-page-value">045-308-9656</div>
+      </div>
+
+      <Line class="company-page-line" />
+      <div class="company-page-row">
+        <div class="company-page-label">FAX</div>
+        <div class="company-page-value">045-308-9657</div>
       </div>
 
       <Line class="company-page-line" />
       <div class="company-page-row">
         <div class="company-page-label">MAIL</div>
-        <div class="company-page-value">
-          info@lead-k.jp (mailto:info@lead-k.jp)
-        </div>
+        <div class="company-page-value">info@lead-k.jp</div>
       </div>
       <Line class="company-page-line" />
     </div>
@@ -95,7 +103,7 @@
 
     <div class="company-page-map">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6501.023972180383!2d139.62061977524803!3d35.44211727266543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c890e7b38f5%3A0xd5dd5fd044243276!2z44CSMjMxLTAwNTIg56We5aWI5bed55yM5qiq5rWc5biC5Lit5Yy66Iux55S677yV4oiS77yX!5e0!3m2!1sja!2sjp!4v1757064612463!5m2!1sja!2sjp"
+        :src="mapEmbedUrl"
         width="1038"
         height="699"
         style="border: 0"
@@ -106,15 +114,9 @@
     </div>
 
     <div class="company-page-address-bar">
-      <div class="company-page-address">
-        〒231-0052　神奈川県横浜市中区英町5番地7
-      </div>
+      <div class="company-page-address">〒231-0052　{{ address }}</div>
       <div class="company-page-map-link">
-        <a
-          href="https://maps.app.goo.gl/4Jv6z6nQ2v4v8p8A7"
-          target="_blank"
-          rel="noopener"
-        >
+        <a :href="mapUrl" target="_blank" rel="noopener noreferrer">
           GOOGLE MAP
           <img
             src="/images/common/arrow-right-black.svg"
@@ -133,6 +135,16 @@ import Line from "@/components/common/Line.vue";
 usePageTitle("COMPANY");
 
 const isMobile = useIsMobile();
+
+const address = "横浜市中区英町1番地隆峰ビル301号";
+// Googleマップの埋め込みURL
+const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(
+  address
+)}&output=embed`;
+// GoogleマップのリンクURL
+const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  address
+)}`;
 </script>
 
 <style scoped lang="scss">
@@ -149,7 +161,9 @@ const isMobile = useIsMobile();
 .company-page-image {
   display: inline-block;
   width: 90%;
-  height: auto;
+  height: 800px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .company-page-header {
@@ -250,7 +264,11 @@ const isMobile = useIsMobile();
   }
 
   .company-page-image {
+    display: inline-block;
     width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
   }
 
   .company-page-details {

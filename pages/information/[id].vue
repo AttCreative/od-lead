@@ -44,7 +44,7 @@ const infoItems = [
   {
     id: 1,
     img: "/images/information/renewal.svg",
-    date: "2025.12.11",
+    date: "2025.12.25",
     tag: "お知らせ",
     title: "ホームページリニューアルのお知らせ",
     text: `平素よりリード株式会社のホームページをご覧いただき、誠にありがとうございます。
