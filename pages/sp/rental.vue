@@ -87,10 +87,6 @@ import PageSpHeader from "~/components/common/PageSpHeader.vue";
 
 usePageTitle("RENTAL & MANAGEMENT");
 
-definePageMeta({
-  middleware: ["ua-device-redirect"],
-});
-
 const isBrokerageServiceOpen = ref<boolean>(false);
 const isTenantVoiceOpen = ref<boolean>(false);
 </script>

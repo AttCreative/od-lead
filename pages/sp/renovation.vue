@@ -298,10 +298,6 @@ import ImageModal from "@/components/common/ImageModal.vue";
 
 usePageTitle("RENOVATION & DESIGN");
 
-definePageMeta({
-  middleware: ["ua-device-redirect"],
-});
-
 const isBrokerageServiceOpen = ref(false);
 const isRenovationBeforeAfterOpen = ref(false);
 
