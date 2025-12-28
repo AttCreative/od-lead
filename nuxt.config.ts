@@ -42,7 +42,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ["~/assets/reset.css"],
+  css: ["~/assets/reset.css", "~/assets/global.css"],
   modules: ["@pinia/nuxt", "@nuxt/image"],
   image: {
     provider: "ipx",

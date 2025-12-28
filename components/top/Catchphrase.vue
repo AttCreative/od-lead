@@ -51,7 +51,6 @@
 
 .catchphrase-section-title,
 .catchphrase-section-highlight {
-  font-family: "Noto Sans Display", "Noto Sans JP", sans-serif;
   font-weight: 700;
   font-size: 46px;
   margin: 0 0 16px 0;
@@ -62,7 +61,6 @@
 }
 
 .catchphrase-section-subtext {
-  font-family: "Noto Sans", "Noto Sans JP", sans-serif;
   font-weight: 500;
   font-size: 20px;
   margin: 12px 0 0 0;

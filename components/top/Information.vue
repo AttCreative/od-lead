@@ -60,7 +60,6 @@ defineProps<Props>();
 .information-list-description {
   font-size: 24px;
   font-weight: 600;
-  font-family: "Noto Sans", sans-serif;
   text-align: center;
 }
 
