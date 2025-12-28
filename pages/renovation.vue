@@ -1,10 +1,6 @@
 <template>
   <div class="renovation-page">
-    <component
-      :is="isTablet ? PageTabletHeader : PageHeader"
-      title="RENOVATION & DESIGN"
-      subtitle="リフォーム事業"
-    />
+    <PageHeader title="RENOVATION & DESIGN" subtitle="リフォーム事業" />
 
     <Breadcrumbs
       :items="[
@@ -302,7 +298,6 @@
 <script setup lang="ts">
 import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import PageHeader from "@/components/common/PageHeader.vue";
-import PageTabletHeader from "@/components/common/PageTabletHeader.vue";
 import ImageModal from "@/components/common/ImageModal.vue";
 
 usePageTitle("RENOVATION & DESIGN");
@@ -310,8 +305,6 @@ usePageTitle("RENOVATION & DESIGN");
 definePageMeta({
   middleware: ["ua-device-redirect"],
 });
-
-const isTablet = useIsTablet();
 
 const modalImageSrc = ref<string | null>(null);
 

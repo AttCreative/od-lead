@@ -1,4 +1,4 @@
-import { isSpUserAgent, isTabletUserAgent } from "@/utils/isMobile";
+import { isSpUserAgent } from "@/utils/isMobile";
 
 export const useIsMobile = () => {
   const isMobile = useState<boolean>("isMobile", () => false);
@@ -16,22 +16,4 @@ export const useIsMobile = () => {
   });
 
   return isMobile;
-};
-
-export const useIsTablet = () => {
-  const isTablet = useState<boolean>("isTablet", () => false);
-
-  if (process.server) {
-    const event = useRequestEvent();
-    const ua =
-      (event?.node.req.headers["user-agent"] as string | undefined) ?? "";
-    isTablet.value = isTabletUserAgent(ua);
-  }
-
-  onMounted(() => {
-    const ua = navigator.userAgent ?? "";
-    isTablet.value = isTabletUserAgent(ua);
-  });
-
-  return isTablet;
 };

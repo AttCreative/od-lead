@@ -26,11 +26,26 @@ defineProps<Props>();
   font-family: "Oswald", sans-serif;
   color: #023482;
   font-size: 90px;
+  font-weight: 600;
 }
 .page-subtitle {
   font-family: "Oswald", sans-serif;
   color: #023482;
   font-size: 20px;
   font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .page-header {
+    padding-left: 48px;
+    margin: 24px auto 0 auto;
+    gap: 6px;
+  }
+  .page-title {
+    font-size: 60px;
+  }
+  .page-subtitle {
+    font-size: 20px;
+  }
 }
 </style>
