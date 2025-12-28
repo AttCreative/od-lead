@@ -80,7 +80,6 @@ const overviewItems = [
 
 .overview-list-description {
   font-size: 24px;
-  font-family: "Noto Sans", sans-serif;
   font-weight: 600;
   align-self: flex-end;
   padding-bottom: 10px;
@@ -157,7 +156,6 @@ const overviewItems = [
 
 .overview-list-text {
   font-size: 24px;
-  font-family: "Noto Sans", sans-serif;
   font-weight: 550;
   line-height: 1.7;
   margin: 0;

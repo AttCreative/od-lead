@@ -82,7 +82,6 @@
 .about-section-text {
   color: #fff;
   line-height: 1.8;
-  font-family: "Noto Sans", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
