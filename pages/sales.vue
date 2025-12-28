@@ -1,10 +1,6 @@
 <template>
   <div class="sales-page">
-    <component
-      :is="isTablet ? PageTabletHeader : PageHeader"
-      title="SALES & RESALE"
-      subtitle="不動産売買・再販事業"
-    />
+    <PageHeader title="SALES & RESALE" subtitle="不動産売買・再販事業" />
 
     <Breadcrumbs
       :items="[
@@ -102,15 +98,12 @@
 <script setup lang="ts">
 import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 import PageHeader from "@/components/common/PageHeader.vue";
-import PageTabletHeader from "@/components/common/PageTabletHeader.vue";
 
 usePageTitle("SALES & RESALE");
 
 definePageMeta({
   middleware: ["ua-device-redirect"],
 });
-
-const isTablet = useIsTablet();
 </script>
 
 <style scoped lang="scss">
