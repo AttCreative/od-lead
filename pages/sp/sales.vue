@@ -107,10 +107,6 @@ import PageSpHeader from "~/components/common/PageSpHeader.vue";
 
 usePageTitle("SALES & RESALE");
 
-definePageMeta({
-  middleware: ["ua-device-redirect"],
-});
-
 const isSupportProcessOpen = ref<boolean>(false);
 const isTransactionOpen = ref<boolean>(false);
 </script>
