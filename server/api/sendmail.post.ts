@@ -11,14 +11,14 @@ export default defineEventHandler(async (event) => {
   const SMTP_PORT = Number(runtimeConfig.smtpPort);
   const SMTP_USER = runtimeConfig.smtpUser as string;
   const SMTP_PASS = runtimeConfig.smtpPass as string;
-  const SMTP_FROM = runtimeConfig.smtpFrom as string;
+  const SMTP_TO = runtimeConfig.smtpTo as string;
 
   if (
     !SMTP_HOST ||
     !SMTP_PORT ||
     !SMTP_USER ||
     !SMTP_PASS ||
-    !SMTP_FROM ||
+    !SMTP_TO ||
     !body.email
   ) {
     throw createError({
@@ -61,8 +61,8 @@ ${body.details}
 
   try {
     await transporter.sendMail({
-      from: SMTP_FROM as string,
-      to: body.email,
+      from: body.email,
+      to: SMTP_TO as string,
       subject: "HPからのお問い合わせです",
       text: mailText,
     });
