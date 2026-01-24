@@ -60,6 +60,11 @@ ${body.details}
       replyTo: body.email,
       subject: "HPからのお問い合わせです",
       text: mailText,
+
+      envelope: {
+        from: SMTP_USER,
+        to: SMTP_USER,
+      },
     });
 
     return res.status(200).json({ ok: true });
