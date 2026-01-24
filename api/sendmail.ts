@@ -13,16 +13,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const SMTP_PORT = Number(process.env.SMTP_PORT ?? "");
   const SMTP_USER = process.env.SMTP_USER;
   const SMTP_PASS = process.env.SMTP_PASS;
-  const SMTP_TO = process.env.SMTP_TO;
 
-  if (
-    !SMTP_HOST ||
-    !SMTP_PORT ||
-    !SMTP_USER ||
-    !SMTP_PASS ||
-    !SMTP_TO ||
-    !body.email
-  ) {
+  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !body.email) {
     return res.status(500).json({
       ok: false,
       message: "SMTP config is missing",
@@ -63,8 +55,9 @@ ${body.details}
     });
 
     await transporter.sendMail({
-      from: body.email,
-      to: SMTP_TO,
+      from: SMTP_USER,
+      to: SMTP_USER,
+      replyTo: body.email,
       subject: "HPからのお問い合わせです",
       text: mailText,
     });
